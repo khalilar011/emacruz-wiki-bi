@@ -1,0 +1,27 @@
+{
+  "ejecutado": "2026-11-03T21:13:03-04:00",
+  "alcance": "Markdown propio en raíz/wiki/docs/prompts/evidencias y fuentes/procedencia; se excluyen copias originales, enlaces web y archivos dentro de ZIP. Comprueba destinos de archivo, no anclas HTML externas.",
+  "paginas": 19,
+  "enlaces_locales": 158,
+  "rotos": [
+    {
+      "origen": "evidencias/consulta_y_verificaciones/contraste/verificaciones.md",
+      "enlace": "../../scripts/verificar_afirmaciones.py"
+    },
+    {
+      "origen": "evidencias/consulta_y_verificaciones/contraste/verificaciones.md",
+      "enlace": "../../fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx"
+    },
+    {
+      "origen": "evidencias/consulta_y_verificaciones/contraste/verificaciones.md",
+      "enlace": "../../evidencias/consulta_y_verificaciones/respuesta_inicial.md"
+    },
+    {
+      "origen": "evidencias/consulta_y_verificaciones/contraste/verificaciones.md",
+      "enlace": "../../wiki/index.md"
+    }
+  ],
+  "aisladas_wiki": [],
+  "duplicados_exactos": [],
+  "cumple": false
+}

@@ -1,0 +1,10 @@
+{
+  "ejecutado": "2026-11-03T21:14:08-04:00",
+  "alcance": "Markdown propio en raíz/wiki/docs/prompts/evidencias y fuentes/procedencia; se excluyen copias originales, enlaces web y archivos dentro de ZIP. Comprueba destinos de archivo, no anclas HTML externas.",
+  "paginas": 20,
+  "enlaces_locales": 168,
+  "rotos": [],
+  "aisladas_wiki": [],
+  "duplicados_exactos": [],
+  "cumple": true
+}

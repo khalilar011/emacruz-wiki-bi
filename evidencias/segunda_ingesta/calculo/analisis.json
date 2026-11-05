@@ -1,0 +1,228 @@
+{
+  "ejecutado": "2026-11-03T21:15:30-04:00",
+  "regla": "KPI documental v1.0",
+  "excel_sha256": "cbc88d35f868abb898139e0e11f64dc134754a644d90430807ad701cae39b59a",
+  "metadatos_excel": {
+    "lastModifiedBy": "Monica Isabel Blanco Rivero",
+    "modified": "2026-10-15T16:29:10Z"
+  },
+  "hojas": {
+    "Frecuencias": {
+      "registros_no_vacios": 21,
+      "columnas": [
+        "ID",
+        "Sector publicado",
+        "Zona",
+        "Delimitación / área",
+        "Distritos indicados",
+        "Días publicados",
+        "Lun",
+        "Mar",
+        "Mié",
+        "Jue",
+        "Vie",
+        "Sáb",
+        "Dom",
+        "Feriados",
+        "Turno",
+        "Inicio",
+        "Fin",
+        "Nota de revisión"
+      ],
+      "dimension": "A1:R22"
+    },
+    "Distritos": {
+      "registros_no_vacios": 16,
+      "columnas": [
+        "Distrito",
+        "Nombre publicado",
+        "Sector"
+      ],
+      "dimension": "A1:C17"
+    },
+    "Servicios": {
+      "registros_no_vacios": 11,
+      "columnas": [
+        "N.º servicio",
+        "Descripción publicada",
+        "Sectores"
+      ],
+      "dimension": "A1:C12"
+    },
+    "Fuentes": {
+      "registros_no_vacios": 13,
+      "columnas": [
+        "Fuente ID",
+        "Contenido",
+        "Imagen recibida",
+        "Detalle extraído",
+        "Vigencia del aviso"
+      ],
+      "dimension": "A1:E16"
+    }
+  },
+  "total_evaluables": 21,
+  "numerador": 6,
+  "porcentaje": 28.571428571428573,
+  "ids_cumplen": [
+    "F07",
+    "F08",
+    "F09",
+    "F10",
+    "F11",
+    "F12"
+  ],
+  "ids_no_cumplen": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "F13",
+    "F14",
+    "F15",
+    "F16",
+    "F17",
+    "F18",
+    "F19",
+    "F20",
+    "F21"
+  ],
+  "faltantes": {
+    "ID": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 0
+    },
+    "Sector publicado": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 6
+    },
+    "Zona": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 1
+    },
+    "Delimitación / área": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 0
+    },
+    "Distritos indicados": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 12
+    },
+    "Días publicados": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 0
+    },
+    "Lun": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 0
+    },
+    "Mar": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 0
+    },
+    "Mié": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 0
+    },
+    "Jue": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 0
+    },
+    "Vie": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 0
+    },
+    "Sáb": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 0
+    },
+    "Dom": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 0
+    },
+    "Feriados": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 20
+    },
+    "Turno": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 0
+    },
+    "Inicio": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 9
+    },
+    "Fin": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 15
+    },
+    "Nota de revisión": {
+      "vacios_fisicos": 0,
+      "ausencias_semanticas": 0
+    }
+  },
+  "dias_validos": 21,
+  "cruces_documentados": 4,
+  "ids_duplicados": [],
+  "duplicados_exactos_excedentes": 0,
+  "filtros": {
+    "sector": {
+      "A (Oeste)": {
+        "numerador": 6,
+        "denominador": 6,
+        "porcentaje": 100.0
+      },
+      "B (Este)": {
+        "numerador": 0,
+        "denominador": 9,
+        "porcentaje": 0.0
+      },
+      "No indicado": {
+        "numerador": 0,
+        "denominador": 6,
+        "porcentaje": 0.0
+      }
+    },
+    "zona": {
+      "Casco Viejo": {
+        "numerador": 1,
+        "denominador": 1,
+        "porcentaje": 100.0
+      },
+      "Centro": {
+        "numerador": 1,
+        "denominador": 3,
+        "porcentaje": 33.333333333333336
+      },
+      "No indicada en fila": {
+        "numerador": 0,
+        "denominador": 1,
+        "porcentaje": 0.0
+      },
+      "Norte": {
+        "numerador": 2,
+        "denominador": 8,
+        "porcentaje": 25.0
+      },
+      "Sur": {
+        "numerador": 2,
+        "denominador": 8,
+        "porcentaje": 25.0
+      }
+    },
+    "turno": {
+      "Día": {
+        "numerador": 2,
+        "denominador": 10,
+        "porcentaje": 20.0
+      },
+      "Noche": {
+        "numerador": 4,
+        "denominador": 11,
+        "porcentaje": 36.36363636363637
+      }
+    }
+  }
+}

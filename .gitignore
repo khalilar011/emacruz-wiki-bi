@@ -1,0 +1,40 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.env
+.env.*
+!.env.example
+salidas/
+# Secretos, temporales y configuraciones personales.
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+.aws/
+.ssh/
+.codex/
+.agents/
+.vscode/
+.idea/
+*.tmp
+*.temp
+*.bak
+*.swp
+~$*
+.DS_Store
+Thumbs.db
+Desktop.ini
+# Fuentes y evidencias se conservan para la entrega PRIVADA autorizada.
+# No cambiar a público sin revisar permisos y metadatos heredados.

@@ -1,0 +1,47 @@
+{
+  "ejecutado": "2026-11-05T03:06:01-04:00",
+  "naturaleza": "Casos sintéticos para verificar reglas de software; no observaciones de negocio.",
+  "casos": [
+    {
+      "descripcion": "cero binario no es ausencia",
+      "cumple": true
+    },
+    {
+      "descripcion": "None sí es ausencia",
+      "cumple": true
+    },
+    {
+      "descripcion": "marcador textual sí es ausencia",
+      "cumple": true
+    },
+    {
+      "descripcion": "día específico conserva sábado",
+      "cumple": true
+    },
+    {
+      "descripcion": "rango inclusivo martes a sábado",
+      "cumple": true
+    },
+    {
+      "descripcion": "diario equivale a siete días",
+      "cumple": true
+    },
+    {
+      "descripcion": "texto desconocido no se adivina",
+      "cumple": true
+    },
+    {
+      "descripcion": "00:00 hora válida",
+      "cumple": true
+    },
+    {
+      "descripcion": "24:00 hora inválida",
+      "cumple": true
+    },
+    {
+      "descripcion": "minuto 60 inválido",
+      "cumple": true
+    }
+  ],
+  "cumple": true
+}

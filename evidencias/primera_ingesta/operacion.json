@@ -1,0 +1,32 @@
+{
+  "ejecutado": "2026-11-03T21:10:52-04:00",
+  "evidencias": [
+    "Excel local y README local",
+    "documentación remota con commit fijado",
+    "HTML docente como requisitos"
+  ],
+  "creados": [
+    "README.md",
+    "docs/decisiones_metodologicas.md",
+    "docs/mapa_trazabilidad.md",
+    "docs/revision_humana.md",
+    "fuentes/procedencia.md",
+    "wiki/diccionario_datos.md",
+    "wiki/fuentes.md",
+    "wiki/hallazgos.md",
+    "wiki/index.md",
+    "wiki/indicadores.md",
+    "wiki/objetivos.md"
+  ],
+  "modificados": [
+    "wiki/log.md"
+  ],
+  "aporte_excel": "Inventario, diccionario, KPI y hallazgos por registro",
+  "aporte_readme_docs": "Objetivos originales, decisiones y límites de inferencia/predicción",
+  "json_ingerido": false,
+  "incertidumbres": [
+    "Vigencia y permiso institucional no acreditados",
+    "Imágenes originales no disponibles",
+    "Revisión humana pendiente"
+  ]
+}

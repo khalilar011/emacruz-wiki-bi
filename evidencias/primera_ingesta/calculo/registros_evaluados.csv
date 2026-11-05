@@ -1,0 +1,22 @@
+ID,fila_excel,sector,zona,turno,dias_validos,cruce_documentado,duracion_minutos,cumple_kpi,motivos,sector_ausente,zona_ausente,distritos_ausentes,feriados_ausentes
+F01,2,No indicado,Norte,Día,True,False,,False,Fin ausente,True,False,True,True
+F02,3,No indicado,Sur,Día,True,False,,False,Fin ausente,True,False,True,True
+F03,4,No indicado,Centro,Noche,True,False,,False,Fin ausente,True,False,True,False
+F04,5,No indicado,Centro,Noche,True,False,,False,Fin ausente,True,False,True,True
+F05,6,No indicado,Norte,Noche,True,False,,False,Fin ausente,True,False,True,True
+F06,7,No indicado,Sur,Noche,True,False,,False,Fin ausente,True,False,True,True
+F07,8,A (Oeste),Casco Viejo,Noche,True,True,480,True,,False,False,True,True
+F08,9,A (Oeste),Centro,Noche,True,True,480,True,,False,False,True,True
+F09,10,A (Oeste),Norte,Noche,True,True,480,True,,False,False,True,True
+F10,11,A (Oeste),Sur,Noche,True,True,480,True,,False,False,True,True
+F11,12,A (Oeste),Norte,Día,True,False,600,True,,False,False,True,True
+F12,13,A (Oeste),Sur,Día,True,False,600,True,,False,False,True,True
+F13,14,B (Este),Sur,Noche,True,False,,False,Inicio ausente; Fin ausente,False,False,False,True
+F14,15,B (Este),Sur,Noche,True,False,,False,Inicio ausente; Fin ausente,False,False,False,True
+F15,16,B (Este),Norte,Noche,True,False,,False,Inicio ausente; Fin ausente,False,False,False,True
+F16,17,B (Este),Norte,Día,True,False,,False,Inicio ausente; Fin ausente,False,False,False,True
+F17,18,B (Este),Norte,Día,True,False,,False,Inicio ausente; Fin ausente,False,False,False,True
+F18,19,B (Este),Norte,Día,True,False,,False,Inicio ausente; Fin ausente,False,False,False,True
+F19,20,B (Este),Sur,Día,True,False,,False,Inicio ausente; Fin ausente,False,False,False,True
+F20,21,B (Este),Sur,Día,True,False,,False,Inicio ausente; Fin ausente,False,False,False,True
+F21,22,B (Este),No indicada en fila,Día,True,False,,False,Inicio ausente; Fin ausente,False,True,False,True

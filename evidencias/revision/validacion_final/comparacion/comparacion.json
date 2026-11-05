@@ -1,0 +1,43 @@
+{
+  "ejecutado": "2026-11-03T21:21:39-04:00",
+  "excel_sha256": "cbc88d35f868abb898139e0e11f64dc134754a644d90430807ad701cae39b59a",
+  "json_sha256": "b4c5f3d2bccffc5e7b530ff27a9fa00c175167ff039b95305815a3d0a7ce298c",
+  "exportador_sha256": "f910c4ffc1d965c988f995419c7125f7f5825a4790b9b5a78c0b874b6d8ce788",
+  "registros_excel": 21,
+  "registros_json": 21,
+  "total_declarado_json": 21,
+  "ids_duplicados_json": [],
+  "ids_extra_json": [],
+  "comparaciones_de_valores_incluida_fila": 399,
+  "variables_originales_comparadas": 18,
+  "valores_originales_comparados": 378,
+  "diferencias": [],
+  "metadatos_comparados": {
+    "fuente": {
+      "esperado": "Base_Emacruz_sectores_y_frecuencias.xlsx",
+      "observado": "Base_Emacruz_sectores_y_frecuencias.xlsx",
+      "coincide": true
+    },
+    "hoja": {
+      "esperado": "Frecuencias",
+      "observado": "Frecuencias",
+      "coincide": true
+    },
+    "total_registros": {
+      "esperado": 21,
+      "observado": 21,
+      "coincide": true
+    }
+  },
+  "columnas_frecuencias_no_exportadas": [],
+  "hojas_no_exportadas": [
+    "Distritos",
+    "Servicios",
+    "Fuentes"
+  ],
+  "orden_ids_coincide": true,
+  "proyeccion_identica_bytes": true,
+  "proyeccion_sha256": "b4c5f3d2bccffc5e7b530ff27a9fa00c175167ff039b95305815a3d0a7ce298c",
+  "limite": "Equivalencia del derivado de esta versión; no valida imágenes, vigencia ni operación. El JSON no aporta fecha de exportación ni hash de Excel embebido.",
+  "coincide": true
+}

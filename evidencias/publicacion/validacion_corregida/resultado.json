@@ -1,0 +1,77 @@
+{
+  "ejecutado": "2026-11-05T03:06:02-04:00",
+  "operaciones": [
+    {
+      "control": "analisis",
+      "inicio": "2026-11-05T03:06:01-04:00",
+      "fin": "2026-11-05T03:06:01-04:00",
+      "comando": [
+        "C:\\Users\\khali\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\khali\\OneDrive\\Desktop\\Universidad\\6to Sem (actual)\\B. Inteligence II\\emacruz-wiki-bi\\scripts\\analizar.py",
+        "--salida",
+        "evidencias\\publicacion\\validacion_corregida\\analisis"
+      ],
+      "exit_code": 0
+    },
+    {
+      "control": "afirmaciones",
+      "inicio": "2026-11-05T03:06:01-04:00",
+      "fin": "2026-11-05T03:06:01-04:00",
+      "comando": [
+        "C:\\Users\\khali\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\khali\\OneDrive\\Desktop\\Universidad\\6to Sem (actual)\\B. Inteligence II\\emacruz-wiki-bi\\scripts\\verificar_afirmaciones.py",
+        "--salida",
+        "evidencias\\publicacion\\validacion_corregida\\afirmaciones"
+      ],
+      "exit_code": 0
+    },
+    {
+      "control": "comparacion",
+      "inicio": "2026-11-05T03:06:01-04:00",
+      "fin": "2026-11-05T03:06:01-04:00",
+      "comando": [
+        "C:\\Users\\khali\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\khali\\OneDrive\\Desktop\\Universidad\\6to Sem (actual)\\B. Inteligence II\\emacruz-wiki-bi\\scripts\\comparar_excel_json.py",
+        "--salida",
+        "evidencias\\publicacion\\validacion_corregida\\comparacion"
+      ],
+      "exit_code": 0
+    },
+    {
+      "control": "reglas",
+      "inicio": "2026-11-05T03:06:01-04:00",
+      "fin": "2026-11-05T03:06:01-04:00",
+      "comando": [
+        "C:\\Users\\khali\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\khali\\OneDrive\\Desktop\\Universidad\\6to Sem (actual)\\B. Inteligence II\\emacruz-wiki-bi\\scripts\\verificar_reglas.py",
+        "--salida",
+        "evidencias\\publicacion\\validacion_corregida\\reglas.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "control": "proyecto",
+      "inicio": "2026-11-05T03:06:01-04:00",
+      "fin": "2026-11-05T03:06:02-04:00",
+      "comando": [
+        "C:\\Users\\khali\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\khali\\OneDrive\\Desktop\\Universidad\\6to Sem (actual)\\B. Inteligence II\\emacruz-wiki-bi\\scripts\\validar_proyecto.py",
+        "--salida",
+        "evidencias\\publicacion\\validacion_corregida\\proyecto.json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "cumple": true,
+  "politica": "Evidencias históricas intactas; carpeta nueva por ejecución. Los contrastes usan las afirmaciones históricas capturadas, no sustituyen validación de nuevas fuentes."
+}

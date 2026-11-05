@@ -1,0 +1,259 @@
+{
+  "ejecutado": "2026-11-03T21:21:34-04:00",
+  "antes": {
+    "fecha": "2026-11-03T21:14:22-04:00",
+    "manifiesto": "evidencias/segunda_ingesta/antes/estado.json",
+    "zip_sha256": "d074efb2353fc1489e74cb130e262e36a8ad0028c97d4e88b9c467dacf2846dd"
+  },
+  "despues": {
+    "fecha": "2026-11-03T21:21:34-04:00",
+    "manifiesto": "evidencias/segunda_ingesta/despues/estado.json",
+    "zip_sha256": "b2448e4ccd735bd7a018ae392f719e58ff39f10695994044c7ac2d6706c96423"
+  },
+  "creados": [
+    "docs/comparacion_ingestas.md",
+    "docs/matriz_cumplimiento.md",
+    "fuentes/referencia_remota/scripts/export_web_data.py",
+    "fuentes/referencia_remota/web/data/frecuencias.json",
+    "scripts/actualizar_segunda.py",
+    "scripts/comparar_estados.py",
+    "scripts/comparar_excel_json.py",
+    "scripts/incorporar_segunda.py",
+    "scripts/reproducir.py",
+    "scripts/validar_proyecto.py",
+    "scripts/verificar_reglas.py",
+    "wiki/comparacion_exportacion.md",
+    "wiki/respuestas_paso_6.md"
+  ],
+  "modificados": [
+    ".gitignore",
+    "README.md",
+    "docs/mapa_trazabilidad.md",
+    "fuentes/manifiesto.json",
+    "fuentes/procedencia.md",
+    "wiki/consulta_negocio.md",
+    "wiki/diccionario_datos.md",
+    "wiki/fuentes.md",
+    "wiki/hallazgos.md",
+    "wiki/index.md",
+    "wiki/indicadores.md",
+    "wiki/log.md",
+    "wiki/revision_calidad.md"
+  ],
+  "retirados": [],
+  "cambios_enlaces": [
+    {
+      "pagina": "README.md",
+      "enlaces_agregados": [
+        "docs/comparacion_ingestas.md",
+        "docs/matriz_cumplimiento.md",
+        "evidencias/primera_ingesta/calculo/analisis.json",
+        "evidencias/primera_ingesta/calculo_v1/analisis.json",
+        "evidencias/primera_ingesta/calculo_v1/registros_evaluados.csv",
+        "evidencias/revision/enlaces_antes.json",
+        "evidencias/revision/enlaces_corregidos.json",
+        "evidencias/revision/validacion_final/proyecto.json",
+        "evidencias/revision/validacion_final/resultado.json",
+        "fuentes/manifiesto.json",
+        "fuentes/procedencia.md",
+        "https://github.com/khalilar011/proyecto-emacruz/tree/5fba63ec96844fa1373b6c5703fce54430b52de8",
+        "wiki/comparacion_exportacion.md",
+        "wiki/consulta_negocio.md",
+        "wiki/indicadores.md",
+        "wiki/log.md",
+        "wiki/respuestas_paso_6.md"
+      ],
+      "enlaces_retirados": []
+    },
+    {
+      "pagina": "docs/mapa_trazabilidad.md",
+      "enlaces_agregados": [
+        "../evidencias/consulta_y_verificaciones/contraste/verificaciones.json",
+        "../evidencias/segunda_ingesta/comparacion/comparacion.json",
+        "../wiki/comparacion_exportacion.md",
+        "../wiki/consulta_negocio.md",
+        "../wiki/respuestas_paso_6.md"
+      ],
+      "enlaces_retirados": []
+    },
+    {
+      "pagina": "fuentes/procedencia.md",
+      "enlaces_agregados": [
+        "../evidencias/segunda_ingesta/comparacion/comparacion.json",
+        "../evidencias/segunda_ingesta/incorporacion.json",
+        "referencia_remota/scripts/export_web_data.py",
+        "referencia_remota/web/data/frecuencias.json"
+      ],
+      "enlaces_retirados": []
+    },
+    {
+      "pagina": "wiki/consulta_negocio.md",
+      "enlaces_agregados": [
+        "../docs/comparacion_ingestas.md",
+        "../evidencias/segunda_ingesta/comparacion/comparacion.json",
+        "../fuentes/referencia_remota/scripts/export_web_data.py"
+      ],
+      "enlaces_retirados": []
+    },
+    {
+      "pagina": "wiki/diccionario_datos.md",
+      "enlaces_agregados": [
+        "../evidencias/segunda_ingesta/comparacion/comparacion.json",
+        "../fuentes/referencia_remota/scripts/export_web_data.py",
+        "../scripts/comparar_excel_json.py"
+      ],
+      "enlaces_retirados": []
+    },
+    {
+      "pagina": "wiki/fuentes.md",
+      "enlaces_agregados": [
+        "../evidencias/segunda_ingesta/antes/estado.json",
+        "../evidencias/segunda_ingesta/comparacion/comparacion.json",
+        "../fuentes/referencia_remota/scripts/export_web_data.py",
+        "../fuentes/referencia_remota/web/data/frecuencias.json",
+        "comparacion_exportacion.md"
+      ],
+      "enlaces_retirados": []
+    },
+    {
+      "pagina": "wiki/hallazgos.md",
+      "enlaces_agregados": [
+        "../evidencias/segunda_ingesta/comparacion/comparacion.json",
+        "../fuentes/referencia_remota/web/data/frecuencias.json"
+      ],
+      "enlaces_retirados": []
+    },
+    {
+      "pagina": "wiki/index.md",
+      "enlaces_agregados": [
+        "../docs/comparacion_ingestas.md",
+        "../docs/matriz_cumplimiento.md",
+        "../evidencias/consulta_y_verificaciones/resumen.md",
+        "../evidencias/primera_ingesta/resumen.md",
+        "../evidencias/segunda_ingesta/resumen.md",
+        "../fuentes/manifiesto.json",
+        "comparacion_exportacion.md",
+        "respuestas_paso_6.md"
+      ],
+      "enlaces_retirados": [
+        "../evidencias/primera_ingesta/calculo_v1/analisis.json"
+      ]
+    },
+    {
+      "pagina": "wiki/indicadores.md",
+      "enlaces_agregados": [
+        "../evidencias/segunda_ingesta/calculo/analisis.json",
+        "../evidencias/segunda_ingesta/comparacion/comparacion.json"
+      ],
+      "enlaces_retirados": []
+    },
+    {
+      "pagina": "wiki/log.md",
+      "enlaces_agregados": [
+        "../evidencias/segunda_ingesta/actualizacion.json",
+        "../evidencias/segunda_ingesta/antes/estado.json",
+        "../evidencias/segunda_ingesta/incorporacion.json"
+      ],
+      "enlaces_retirados": []
+    },
+    {
+      "pagina": "wiki/revision_calidad.md",
+      "enlaces_agregados": [
+        "../evidencias/revision/enlaces_corregidos.json",
+        "../evidencias/segunda_ingesta/comparacion/comparacion.json"
+      ],
+      "enlaces_retirados": []
+    },
+    {
+      "pagina": "docs/comparacion_ingestas.md",
+      "enlaces_agregados": [
+        "../evidencias/primera_ingesta/estado.json",
+        "../evidencias/segunda_ingesta/actualizacion.json",
+        "../evidencias/segunda_ingesta/antes/estado.json",
+        "../evidencias/segunda_ingesta/comparacion/comparacion.json",
+        "../evidencias/segunda_ingesta/despues/estado.json",
+        "../evidencias/segunda_ingesta/diferencias_desde_antes/cambios.json",
+        "../evidencias/segunda_ingesta/diferencias_desde_antes/paginas.diff",
+        "../evidencias/segunda_ingesta/diferencias_desde_primera/cambios.json",
+        "../evidencias/segunda_ingesta/diferencias_desde_primera/paginas.diff",
+        "../scripts/comparar_estados.py",
+        "../wiki/comparacion_exportacion.md",
+        "../wiki/index.md",
+        "../wiki/revision_calidad.md"
+      ],
+      "enlaces_retirados": []
+    },
+    {
+      "pagina": "docs/matriz_cumplimiento.md",
+      "enlaces_agregados": [
+        "../AGENTS.md",
+        "../README.md",
+        "../evidencias/consulta_y_verificaciones/contraste/verificaciones.json",
+        "../evidencias/consulta_y_verificaciones/lectura_y_afirmaciones.json",
+        "../evidencias/primera_ingesta/resumen.md",
+        "../evidencias/revision/enlaces_antes.json",
+        "../evidencias/revision/enlaces_corregidos.json",
+        "../evidencias/revision/validacion_final/resultado.json",
+        "../evidencias/segunda_ingesta/resumen.md",
+        "../fuentes/consigna/Tarea_wiki_IA_proyecto_BI.html",
+        "../fuentes/manifiesto.json",
+        "../prompts/justificacion_mejoras.md",
+        "../prompts/prompt_inicial.md",
+        "../prompts/prompt_mejorado.md",
+        "../wiki/consulta_negocio.md",
+        "../wiki/diccionario_datos.md",
+        "../wiki/hallazgos.md",
+        "../wiki/index.md",
+        "../wiki/indicadores.md",
+        "../wiki/log.md",
+        "../wiki/objetivos.md",
+        "../wiki/respuestas_paso_6.md",
+        "../wiki/revision_calidad.md",
+        "comparacion_ingestas.md",
+        "mapa_trazabilidad.md",
+        "revision_humana.md"
+      ],
+      "enlaces_retirados": []
+    },
+    {
+      "pagina": "wiki/comparacion_exportacion.md",
+      "enlaces_agregados": [
+        "../docs/comparacion_ingestas.md",
+        "../evidencias/segunda_ingesta/comparacion/comparacion.json",
+        "../evidencias/segunda_ingesta/comparacion/proyeccion_reproducida.json",
+        "../fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx",
+        "../fuentes/procedencia.md",
+        "../fuentes/referencia_remota/scripts/export_web_data.py",
+        "../fuentes/referencia_remota/web/data/frecuencias.json",
+        "../scripts/comparar_excel_json.py",
+        "diccionario_datos.md",
+        "index.md"
+      ],
+      "enlaces_retirados": []
+    },
+    {
+      "pagina": "wiki/respuestas_paso_6.md",
+      "enlaces_agregados": [
+        "../AGENTS.md",
+        "../README.md",
+        "../docs/comparacion_ingestas.md",
+        "../docs/decisiones_metodologicas.md",
+        "../docs/revision_humana.md",
+        "../evidencias/consulta_y_verificaciones/contraste/verificaciones.json",
+        "../evidencias/segunda_ingesta/comparacion/comparacion.json",
+        "../fuentes/consigna/Tarea_wiki_IA_proyecto_BI.html",
+        "../fuentes/manifiesto.json",
+        "../fuentes/referencia_remota/docs/plan-crisp-dm.md",
+        "comparacion_exportacion.md",
+        "consulta_negocio.md",
+        "hallazgos.md",
+        "index.md",
+        "indicadores.md",
+        "log.md",
+        "objetivos.md"
+      ],
+      "enlaces_retirados": []
+    }
+  ],
+  "nota": "La propia captura registra su asiento de log después del ZIP. Este diff no altera estados históricos."
+}

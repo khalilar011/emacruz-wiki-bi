@@ -1,0 +1,2 @@
+# Python >=3.10. Solo biblioteca estándar: zipfile, XML, json, csv, hashlib.
+# No se requieren paquetes de pip para reproducir este proyecto.

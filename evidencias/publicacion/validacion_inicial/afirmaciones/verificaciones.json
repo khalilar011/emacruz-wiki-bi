@@ -1,0 +1,149 @@
+{
+  "ejecutado": "2026-11-05T02:57:28-04:00",
+  "fuente_sha256": "cbc88d35f868abb898139e0e11f64dc134754a644d90430807ad701cae39b59a",
+  "afirmaciones_sha256": "3edd8989f4cf97ddb3a1cdf29460d13b3d22ef9a2b48439cd907c5b417a5e830",
+  "verificaciones": [
+    {
+      "id": "V1",
+      "afirmacion": "21 registros evaluables en Frecuencias",
+      "fuente": "fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx",
+      "localizacion": "Frecuencias!A2:R22",
+      "procedimiento": "Contar filas XML no totalmente vacías después de encabezado, preservando coordenadas; no usar dimensión o recuento de otras hojas.",
+      "esperado_respuesta_inicial": 21,
+      "observado": 21,
+      "estado": "confirmada",
+      "correccion": null
+    },
+    {
+      "id": "V2",
+      "afirmacion": "15 registros con Fin ausente",
+      "fuente": "fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx",
+      "localizacion": "Frecuencias!Q2:Q22",
+      "procedimiento": "Leer columna Q y reconocer nulo, vacío y marcadores de ausencia. Registrar celdas e IDs.",
+      "esperado_respuesta_inicial": 15,
+      "observado": 15,
+      "estado": "confirmada",
+      "correccion": null
+    },
+    {
+      "id": "V3",
+      "afirmacion": "6 de 21 cumplen KPI v1.0: F07–F12, 28,57 %",
+      "fuente": "fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx",
+      "localizacion": "Frecuencias!A2:R22; notas R8:R11",
+      "procedimiento": "Reconstruir controles desde celdas: IDs, duplicados, sector/zona, delimitación, turno, vocabulario de días contra G:M, horas y cruce explícito. Comparar IDs, numerador y denominador, sin llamar al analizador.",
+      "esperado_respuesta_inicial": {
+        "numerador": 6,
+        "denominador": 21,
+        "ids": [
+          "F07",
+          "F08",
+          "F09",
+          "F10",
+          "F11",
+          "F12"
+        ]
+      },
+      "observado": {
+        "numerador": 6,
+        "denominador": 21,
+        "ids": [
+          "F07",
+          "F08",
+          "F09",
+          "F10",
+          "F11",
+          "F12"
+        ]
+      },
+      "estado": "confirmada",
+      "correccion": null
+    }
+  ],
+  "detalle_sin_fin": [
+    {
+      "id": "F01",
+      "celda": "Q2",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F02",
+      "celda": "Q3",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F03",
+      "celda": "Q4",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F04",
+      "celda": "Q5",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F05",
+      "celda": "Q6",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F06",
+      "celda": "Q7",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F13",
+      "celda": "Q14",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F14",
+      "celda": "Q15",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F15",
+      "celda": "Q16",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F16",
+      "celda": "Q17",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F17",
+      "celda": "Q18",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F18",
+      "celda": "Q19",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F19",
+      "celda": "Q20",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F20",
+      "celda": "Q21",
+      "valor": "No indicado"
+    },
+    {
+      "id": "F21",
+      "celda": "Q22",
+      "valor": "No indicado"
+    }
+  ],
+  "controles_adicionales": {
+    "dias_concordantes": 21,
+    "cruces_documentados": [
+      "F07",
+      "F08",
+      "F09",
+      "F10"
+    ]
+  },
+  "coinciden_todas": true
+}

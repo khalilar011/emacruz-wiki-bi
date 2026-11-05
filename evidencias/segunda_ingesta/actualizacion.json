@@ -1,0 +1,32 @@
+{
+  "ejecutado": "2026-11-03T21:17:46-04:00",
+  "evidencias_nuevas": [
+    "JSON original",
+    "exportador original"
+  ],
+  "modificados": [
+    "fuentes/procedencia.md",
+    "wiki/fuentes.md",
+    "wiki/diccionario_datos.md",
+    "wiki/indicadores.md",
+    "wiki/hallazgos.md",
+    "wiki/consulta_negocio.md",
+    "wiki/revision_calidad.md",
+    "docs/mapa_trazabilidad.md",
+    "wiki/index.md",
+    "wiki/log.md"
+  ],
+  "creados": [
+    "wiki/comparacion_exportacion.md",
+    "wiki/respuestas_paso_6.md",
+    "evidencias/primera_ingesta/resumen.md",
+    "evidencias/segunda_ingesta/resumen.md",
+    "evidencias/consulta_y_verificaciones/resumen.md"
+  ],
+  "confirmado": "KPI 6/21; faltantes y cruces preservados; 399 comparaciones sin diferencias",
+  "cambio_conclusion": "Fidelidad de la exportación ahora comprobada; sin nuevo dato operativo",
+  "pendientes": [
+    "Revisión humana",
+    "Vigencia, imágenes, polígonos y permisos"
+  ]
+}

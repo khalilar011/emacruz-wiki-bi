@@ -1,0 +1,326 @@
+{
+  "ejecutado": "2026-11-05T03:07:57-04:00",
+  "candidatos": 152,
+  "archivos": [
+    ".gitattributes",
+    ".gitignore",
+    "AGENTS.md",
+    "README.md",
+    "docs/comparacion_ingestas.md",
+    "docs/decisiones_metodologicas.md",
+    "docs/mapa_trazabilidad.md",
+    "docs/matriz_cumplimiento.md",
+    "docs/publicacion_github.md",
+    "docs/revision_humana.md",
+    "evidencias/consulta_y_verificaciones/contraste/verificaciones.json",
+    "evidencias/consulta_y_verificaciones/contraste/verificaciones.md",
+    "evidencias/consulta_y_verificaciones/lectura_y_afirmaciones.json",
+    "evidencias/consulta_y_verificaciones/respuesta_inicial.md",
+    "evidencias/consulta_y_verificaciones/resumen.md",
+    "evidencias/primera_ingesta/calculo/analisis.json",
+    "evidencias/primera_ingesta/calculo/registros_evaluados.csv",
+    "evidencias/primera_ingesta/calculo_v1/analisis.json",
+    "evidencias/primera_ingesta/calculo_v1/registros_evaluados.csv",
+    "evidencias/primera_ingesta/estado.json",
+    "evidencias/primera_ingesta/estado.zip",
+    "evidencias/primera_ingesta/inspeccion_excel.json",
+    "evidencias/primera_ingesta/operacion.json",
+    "evidencias/primera_ingesta/resumen.md",
+    "evidencias/publicacion/auditoria_corregida.json",
+    "evidencias/publicacion/auditoria_inicial.json",
+    "evidencias/publicacion/estado_remoto_reanudacion.json",
+    "evidencias/publicacion/validacion_corregida/afirmaciones.log",
+    "evidencias/publicacion/validacion_corregida/afirmaciones/verificaciones.json",
+    "evidencias/publicacion/validacion_corregida/afirmaciones/verificaciones.md",
+    "evidencias/publicacion/validacion_corregida/analisis.log",
+    "evidencias/publicacion/validacion_corregida/analisis/analisis.json",
+    "evidencias/publicacion/validacion_corregida/analisis/registros_evaluados.csv",
+    "evidencias/publicacion/validacion_corregida/comparacion.log",
+    "evidencias/publicacion/validacion_corregida/comparacion/comparacion.json",
+    "evidencias/publicacion/validacion_corregida/comparacion/proyeccion_reproducida.json",
+    "evidencias/publicacion/validacion_corregida/proyecto.json",
+    "evidencias/publicacion/validacion_corregida/proyecto.log",
+    "evidencias/publicacion/validacion_corregida/reglas.json",
+    "evidencias/publicacion/validacion_corregida/reglas.log",
+    "evidencias/publicacion/validacion_corregida/resultado.json",
+    "evidencias/publicacion/validacion_inicial/afirmaciones.log",
+    "evidencias/publicacion/validacion_inicial/afirmaciones/verificaciones.json",
+    "evidencias/publicacion/validacion_inicial/afirmaciones/verificaciones.md",
+    "evidencias/publicacion/validacion_inicial/analisis.log",
+    "evidencias/publicacion/validacion_inicial/analisis/analisis.json",
+    "evidencias/publicacion/validacion_inicial/analisis/registros_evaluados.csv",
+    "evidencias/publicacion/validacion_inicial/comparacion.log",
+    "evidencias/publicacion/validacion_inicial/comparacion/comparacion.json",
+    "evidencias/publicacion/validacion_inicial/comparacion/proyeccion_reproducida.json",
+    "evidencias/publicacion/validacion_inicial/proyecto.json",
+    "evidencias/publicacion/validacion_inicial/proyecto.log",
+    "evidencias/publicacion/validacion_inicial/reglas.json",
+    "evidencias/publicacion/validacion_inicial/reglas.log",
+    "evidencias/publicacion/validacion_inicial/resultado.json",
+    "evidencias/recuperacion_remota_inicial.json",
+    "evidencias/recuperacion_remota_segunda.json",
+    "evidencias/revision/cierre/estado.json",
+    "evidencias/revision/cierre/estado.zip",
+    "evidencias/revision/enlaces_antes.json",
+    "evidencias/revision/enlaces_cierre.json",
+    "evidencias/revision/enlaces_corregidos.json",
+    "evidencias/revision/entrega.json",
+    "evidencias/revision/resumen.md",
+    "evidencias/revision/validacion_final/afirmaciones.log",
+    "evidencias/revision/validacion_final/afirmaciones/verificaciones.json",
+    "evidencias/revision/validacion_final/afirmaciones/verificaciones.md",
+    "evidencias/revision/validacion_final/analisis.log",
+    "evidencias/revision/validacion_final/analisis/analisis.json",
+    "evidencias/revision/validacion_final/analisis/registros_evaluados.csv",
+    "evidencias/revision/validacion_final/comparacion.log",
+    "evidencias/revision/validacion_final/comparacion/comparacion.json",
+    "evidencias/revision/validacion_final/comparacion/proyeccion_reproducida.json",
+    "evidencias/revision/validacion_final/proyecto.json",
+    "evidencias/revision/validacion_final/proyecto.log",
+    "evidencias/revision/validacion_final/reglas.json",
+    "evidencias/revision/validacion_final/reglas.log",
+    "evidencias/revision/validacion_final/resultado.json",
+    "evidencias/revision/validacion_final_corregida/afirmaciones.log",
+    "evidencias/revision/validacion_final_corregida/afirmaciones/verificaciones.json",
+    "evidencias/revision/validacion_final_corregida/afirmaciones/verificaciones.md",
+    "evidencias/revision/validacion_final_corregida/analisis.log",
+    "evidencias/revision/validacion_final_corregida/analisis/analisis.json",
+    "evidencias/revision/validacion_final_corregida/analisis/registros_evaluados.csv",
+    "evidencias/revision/validacion_final_corregida/comparacion.log",
+    "evidencias/revision/validacion_final_corregida/comparacion/comparacion.json",
+    "evidencias/revision/validacion_final_corregida/comparacion/proyeccion_reproducida.json",
+    "evidencias/revision/validacion_final_corregida/proyecto.json",
+    "evidencias/revision/validacion_final_corregida/proyecto.log",
+    "evidencias/revision/validacion_final_corregida/reglas.json",
+    "evidencias/revision/validacion_final_corregida/reglas.log",
+    "evidencias/revision/validacion_final_corregida/resultado.json",
+    "evidencias/segunda_ingesta/actualizacion.json",
+    "evidencias/segunda_ingesta/antes/estado.json",
+    "evidencias/segunda_ingesta/antes/estado.zip",
+    "evidencias/segunda_ingesta/calculo/analisis.json",
+    "evidencias/segunda_ingesta/calculo/registros_evaluados.csv",
+    "evidencias/segunda_ingesta/comparacion/comparacion.json",
+    "evidencias/segunda_ingesta/comparacion/proyeccion_reproducida.json",
+    "evidencias/segunda_ingesta/despues/estado.json",
+    "evidencias/segunda_ingesta/despues/estado.zip",
+    "evidencias/segunda_ingesta/diferencias_desde_antes/cambios.json",
+    "evidencias/segunda_ingesta/diferencias_desde_antes/paginas.diff",
+    "evidencias/segunda_ingesta/diferencias_desde_primera/cambios.json",
+    "evidencias/segunda_ingesta/diferencias_desde_primera/paginas.diff",
+    "evidencias/segunda_ingesta/incorporacion.json",
+    "evidencias/segunda_ingesta/resumen.md",
+    "fuentes/consigna/Tarea_wiki_IA_proyecto_BI.html",
+    "fuentes/consigna/texto_completo.txt",
+    "fuentes/manifiesto.json",
+    "fuentes/originales/README.md",
+    "fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx",
+    "fuentes/procedencia.md",
+    "fuentes/referencia_remota/AGENTS.md",
+    "fuentes/referencia_remota/README.md",
+    "fuentes/referencia_remota/data/README.md",
+    "fuentes/referencia_remota/docs/fuentes-datos.md",
+    "fuentes/referencia_remota/docs/historias/SCRUM-22.md",
+    "fuentes/referencia_remota/docs/plan-crisp-dm.md",
+    "fuentes/referencia_remota/scripts/export_web_data.py",
+    "fuentes/referencia_remota/web/data/frecuencias.json",
+    "prompts/justificacion_mejoras.md",
+    "prompts/prompt_inicial.md",
+    "prompts/prompt_mejorado.md",
+    "requirements.txt",
+    "scripts/actualizar_segunda.py",
+    "scripts/analizar.py",
+    "scripts/auditar_enlaces.py",
+    "scripts/auditar_publicacion.py",
+    "scripts/comparar_estados.py",
+    "scripts/comparar_excel_json.py",
+    "scripts/comun.py",
+    "scripts/construir_primera.py",
+    "scripts/consultar.py",
+    "scripts/incorporar_segunda.py",
+    "scripts/instantanea.py",
+    "scripts/preparar_fuentes.py",
+    "scripts/reproducir.py",
+    "scripts/validar_proyecto.py",
+    "scripts/verificar_afirmaciones.py",
+    "scripts/verificar_reglas.py",
+    "wiki/comparacion_exportacion.md",
+    "wiki/consulta_negocio.md",
+    "wiki/diccionario_datos.md",
+    "wiki/fuentes.md",
+    "wiki/hallazgos.md",
+    "wiki/index.md",
+    "wiki/indicadores.md",
+    "wiki/log.md",
+    "wiki/objetivos.md",
+    "wiki/respuestas_paso_6.md",
+    "wiki/revision_calidad.md"
+  ],
+  "unidades_inspeccionadas": 442,
+  "archivos_comprimidos": [
+    {
+      "ruta": "evidencias/primera_ingesta/estado.zip",
+      "entradas": 34
+    },
+    {
+      "ruta": "evidencias/primera_ingesta/estado.zip!fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx",
+      "entradas": 21
+    },
+    {
+      "ruta": "evidencias/revision/cierre/estado.zip",
+      "entradas": 52
+    },
+    {
+      "ruta": "evidencias/revision/cierre/estado.zip!fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx",
+      "entradas": 21
+    },
+    {
+      "ruta": "evidencias/segunda_ingesta/antes/estado.zip",
+      "entradas": 39
+    },
+    {
+      "ruta": "evidencias/segunda_ingesta/antes/estado.zip!fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx",
+      "entradas": 21
+    },
+    {
+      "ruta": "evidencias/segunda_ingesta/despues/estado.zip",
+      "entradas": 52
+    },
+    {
+      "ruta": "evidencias/segunda_ingesta/despues/estado.zip!fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx",
+      "entradas": 21
+    },
+    {
+      "ruta": "fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx",
+      "entradas": 21
+    }
+  ],
+  "hallazgos_credenciales_o_binarios": [],
+  "correos_heredados_para_revision": [
+    {
+      "ruta": "evidencias/primera_ingesta/estado.zip!fuentes/consigna/Tarea_wiki_IA_proyecto_BI.html",
+      "correos_detectados": 1
+    },
+    {
+      "ruta": "evidencias/revision/cierre/estado.zip!fuentes/consigna/Tarea_wiki_IA_proyecto_BI.html",
+      "correos_detectados": 1
+    },
+    {
+      "ruta": "evidencias/segunda_ingesta/antes/estado.zip!fuentes/consigna/Tarea_wiki_IA_proyecto_BI.html",
+      "correos_detectados": 1
+    },
+    {
+      "ruta": "evidencias/segunda_ingesta/despues/estado.zip!fuentes/consigna/Tarea_wiki_IA_proyecto_BI.html",
+      "correos_detectados": 1
+    },
+    {
+      "ruta": "fuentes/consigna/Tarea_wiki_IA_proyecto_BI.html",
+      "correos_detectados": 1
+    }
+  ],
+  "repositorios_anidados": [],
+  "enlaces_simbolicos": [],
+  "temporales_o_secretos_por_nombre": [],
+  "word_pdf": [],
+  "integridad_fuentes": [
+    {
+      "ruta": "fuentes/originales/README.md",
+      "coincide": true
+    },
+    {
+      "ruta": "fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx",
+      "coincide": true
+    },
+    {
+      "ruta": "fuentes/referencia_remota/AGENTS.md",
+      "coincide": true
+    },
+    {
+      "ruta": "fuentes/referencia_remota/README.md",
+      "coincide": true
+    },
+    {
+      "ruta": "fuentes/referencia_remota/data/README.md",
+      "coincide": true
+    },
+    {
+      "ruta": "fuentes/referencia_remota/docs/fuentes-datos.md",
+      "coincide": true
+    },
+    {
+      "ruta": "fuentes/referencia_remota/docs/plan-crisp-dm.md",
+      "coincide": true
+    },
+    {
+      "ruta": "fuentes/referencia_remota/docs/historias/SCRUM-22.md",
+      "coincide": true
+    },
+    {
+      "ruta": "fuentes/consigna/Tarea_wiki_IA_proyecto_BI.html",
+      "coincide": true
+    },
+    {
+      "ruta": "fuentes/referencia_remota/web/data/frecuencias.json",
+      "coincide": true
+    },
+    {
+      "ruta": "fuentes/referencia_remota/scripts/export_web_data.py",
+      "coincide": true
+    }
+  ],
+  "fuentes_excluidas_por_error": [],
+  "enlaces_en_candidatos": {
+    "revisados": 373,
+    "destinos_ausentes": [],
+    "alcance": "Destinos relativos de Markdown propio en el árbol candidato, distinguiendo mayúsculas y minúsculas. No equivale a comprobar el render remoto o anclas."
+  },
+  "ejemplos_ignorados": [
+    ".env",
+    ".venv/pyvenv.cfg",
+    "scripts/__pycache__/prueba.pyc",
+    "secrets.json",
+    "archivo.tmp"
+  ],
+  "original": {
+    "disponible": true,
+    "alcance": "Todos los archivos, incluidos metadatos Git; solo lecturas.",
+    "archivos": {
+      ".git/COMMIT_EDITMSG": "9ff69865c84b299098e3fef5208c66a0b38ae6c56597b0da21f5293fc9caecfd",
+      ".git/config": "2fe1283a250063e747dae18311cd8fa966f9408d60fe5239b3e161abc4a11b3f",
+      ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+      ".git/HEAD": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80",
+      ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+      ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+      ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+      ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+      ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+      ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+      ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+      ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+      ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+      ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+      ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+      ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+      ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+      ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+      ".git/index": "5a74c7e606dc1ab2eded9c8b0f76261e63873d0687657643ec31c9e0319c5d32",
+      ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+      ".git/logs/HEAD": "e5fcb84c8a029f62e0051926b0f5461235155a356eb70371a52bf2704aaebf17",
+      ".git/logs/refs/heads/main": "e5fcb84c8a029f62e0051926b0f5461235155a356eb70371a52bf2704aaebf17",
+      ".git/logs/refs/remotes/origin/main": "a8d6a381640d9fdff947994de86f3d2e150e48dd5996a901a3c22b5729735bcf",
+      ".git/objects/29/a44d875600d3ddc88fb53bafce80469902ce50": "2f054f46721b4efc253f8753f3258ce0ac356cf442966aaeb7b263ac48e22c20",
+      ".git/objects/3b/34cea1348b49c159a826435efc9d3ce53d77c5": "7ed695215d84e56c625ba14b68b671388e51b935182b7c625ac3c963f4d94dca",
+      ".git/objects/b8/96d38b104a68bac859441f0a766755dd78db5c": "5b866c06da132d3b6afad25cd0dc7e2d48c473bcf73afe81bcfba4abf98a0df3",
+      ".git/objects/bf/e85854309cf0d622b566991b4a9e29831c1ed5": "d9289c24f1a8311a697cbf95b10916db9464ac5d2a882ef5d820d9e577fbf40a",
+      ".git/objects/fb/705d87e8f45386f8f2790c3cd757e4037a2845": "e5ae49dd72e0535719564f4e3faba0cd52780446100414db033b53a66b619a8c",
+      ".git/objects/fc/02c2d7131e71f8543ed1b8c446fe2b21913902": "ef727a1b502d1a5f872bcf492425aa77d74b3a0f61b914619a6b9646f8c8592b",
+      ".git/refs/heads/main": "8d2f8550d01dbe149e30c1d76c356c76fec893b2e984b665710dee208af72f0a",
+      ".git/refs/remotes/origin/main": "8d2f8550d01dbe149e30c1d76c356c76fec893b2e984b665710dee208af72f0a",
+      ".gitignore": "0e63c149df21000290d7b0a00d80cb72e6af1ae25c4f736030d796385340e666",
+      "data/Base_Emacruz_sectores_y_frecuencias.xlsx": "cbc88d35f868abb898139e0e11f64dc134754a644d90430807ad701cae39b59a",
+      "README.md": "dd0c007fd49dd3d2912ec3065f97460f16966a6fdf177901397cb2b53567456c"
+    }
+  },
+  "original_identico_a_base": true,
+  "limites": "Búsqueda heurística con patrones, ZIP/OOXML y base64. Los nombres, rutas locales y metadatos académicos heredados se conservan solo para la entrega privada solicitada. Sin autorización institucional, licencia pública ni examen de imágenes ausentes.",
+  "cumple": true
+}

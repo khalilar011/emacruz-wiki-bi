@@ -1,0 +1,58 @@
+{
+  "ejecutado": "2026-11-03T21:12:23-04:00",
+  "orden_lectura": [
+    {
+      "ruta": "wiki/index.md",
+      "leido": "2026-11-03T21:12:23-04:00",
+      "sha256": "da69cac30f5ffc573fa5cd7fe7d500758ba52fb7eb49fdb729d16dd1dfa9e976",
+      "caracteres": 958
+    },
+    {
+      "ruta": "wiki/objetivos.md",
+      "leido": "2026-11-03T21:12:23-04:00",
+      "sha256": "81dfb618f9ef1fcdc872d7d502847728abc258dac70c810c4ab8aafd49834dcc",
+      "caracteres": 2880
+    },
+    {
+      "ruta": "wiki/fuentes.md",
+      "leido": "2026-11-03T21:12:23-04:00",
+      "sha256": "f104e367d5c6d6f59bcf759b2ae9525a63a9da6d26fd2c98be823835859bd92c",
+      "caracteres": 2231
+    },
+    {
+      "ruta": "wiki/indicadores.md",
+      "leido": "2026-11-03T21:12:23-04:00",
+      "sha256": "025da9131aeb2567ba8eecc5114e0f89a1c97766bfc183d74990b0de95c5136d",
+      "caracteres": 4408
+    },
+    {
+      "ruta": "wiki/hallazgos.md",
+      "leido": "2026-11-03T21:12:23-04:00",
+      "sha256": "52a6097e861f7548e47f9a85a771d932abc12bc0fb4883656085cafee24bc16a",
+      "caracteres": 2685
+    },
+    {
+      "ruta": "wiki/diccionario_datos.md",
+      "leido": "2026-11-03T21:12:23-04:00",
+      "sha256": "bd665bd49e71f158cbd5badcf99fe75eada523fcd7763bcc82011a937dabe9af",
+      "caracteres": 3900
+    }
+  ],
+  "afirmaciones": {
+    "V1": 21,
+    "V2": 15,
+    "V3": {
+      "numerador": 6,
+      "denominador": 21,
+      "ids": [
+        "F07",
+        "F08",
+        "F09",
+        "F10",
+        "F11",
+        "F12"
+      ]
+    }
+  },
+  "estado": "Inicial, antes de verificación independiente"
+}

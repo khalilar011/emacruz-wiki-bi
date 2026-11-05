@@ -1,0 +1,33 @@
+{
+  "ejecutado": "2026-11-03T21:15:30-04:00",
+  "fuentes_nuevas": [
+    {
+      "ruta": "fuentes/referencia_remota/web/data/frecuencias.json",
+      "origen": "https://github.com/khalilar011/proyecto-emacruz/blob/5fba63ec96844fa1373b6c5703fce54430b52de8/web/data/frecuencias.json",
+      "consulta": "2026-11-03T21:15:30-04:00",
+      "sha256": "b4c5f3d2bccffc5e7b530ff27a9fa00c175167ff039b95305815a3d0a7ce298c",
+      "git_blob_sha1": "f63a351a8a1e67073008c469ef75d315874f9412",
+      "version": "5fba63ec96844fa1373b6c5703fce54430b52de8",
+      "tipo": "GitHub conector, base64",
+      "ingesta": 2,
+      "relacion": "JSON derivado de Excel; exportador documenta transformación"
+    },
+    {
+      "ruta": "fuentes/referencia_remota/scripts/export_web_data.py",
+      "origen": "https://github.com/khalilar011/proyecto-emacruz/blob/5fba63ec96844fa1373b6c5703fce54430b52de8/scripts/export_web_data.py",
+      "consulta": "2026-11-03T21:15:30-04:00",
+      "sha256": "f910c4ffc1d965c988f995419c7125f7f5825a4790b9b5a78c0b874b6d8ce788",
+      "git_blob_sha1": "00b9da5bacc676d19895b2603d325ba0bc446b55",
+      "version": "5fba63ec96844fa1373b6c5703fce54430b52de8",
+      "tipo": "GitHub conector, base64",
+      "ingesta": 2,
+      "relacion": "JSON derivado de Excel; exportador documenta transformación"
+    }
+  ],
+  "estado_previo": "d074efb2353fc1489e74cb130e262e36a8ad0028c97d4e88b9c467dacf2846dd",
+  "aporte": "Nueva evidencia técnica de la representación de Frecuencias en Alerta Ruta, no fuente independiente de negocio",
+  "incertidumbres": [
+    "Vigencia y permiso institucional continúan sin acreditar",
+    "JSON sin hash del Excel ni fecha de exportación embebidos"
+  ]
+}

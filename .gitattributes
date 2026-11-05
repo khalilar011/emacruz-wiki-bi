@@ -1,0 +1,3 @@
+# Conservar bytes exactos, incluidos originales y evidencias históricas.
+# Evita que core.autocrlf cambie los SHA-256 al clonar en Windows.
+* -text

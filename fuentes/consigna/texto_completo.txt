@@ -1,0 +1,214 @@
+Tarea: wiki de conocimiento asistida por IA para un proyecto BI
+Tarea: wiki de conocimiento asistida por IA
+para un proyecto BI
+Implementación, validación y próximos pasos
+Business Intelligence II · Unidad 3
+2026-11-03
+1 Propósito y punto de
+partida
+2 Trabajo que debe realizar
+2.1 1. Delimitar la utilidad de la
+wiki
+2.2 2. Diseñar la estructura y las
+reglas
+2.3 3. Mejorar el prompt y ejecutar
+una primera ingesta
+2.4 4. Consultar, verificar y
+conservar la respuesta
+2.5 5. Revisar la salud de la wiki e
+iterar
+2.6 6. Responder los pasos
+consiguientes
+3 Prompt genérico sugerido para
+mejorar
+4 Entrega
+5 Rúbrica de evaluación (100
+puntos)
+1 Propósito y punto de
+partida
+Implemente en su proyecto Integrador la metodología de
+Business Intelligence (BI) en proceso de aprendizaje una wiki
+de conocimiento mantenida con ayuda de un agente de IA. La wiki debe
+conectar evidencia, definiciones, decisiones y resultados para facilitar
+el cumplimiento de los objetivos del proyecto. Se parte de un proyecto
+que ya tiene uno o varios objetivos, una fuente de datos provisional o
+final y algunos resultados esperados. No se pide inventar otro
+proyecto.
+La tarea adapta el patrón LLM
+Wiki de Andrej Karpathy: fuentes originales conservadas,
+páginas Markdown derivadas y enlazadas, instrucciones para el agente, e
+iteraciones de ingesta, consulta y revisión. El gist
+describe una idea general; usted debe concretarla y justificar las
+decisiones para su contexto BI.
+2 Trabajo que debe
+realizar
+2.1 1. Delimitar la
+utilidad de la wiki
+Documente los objetivos BI existentes, la decisión que apoyará cada
+uno, el usuario de los resultados, las fuentes disponibles y los
+resultados esperados. Elija al menos una pregunta de negocio
+verificable cuya respuesta mejore al conectar fuentes,
+definiciones de indicadores y hallazgos. Indique qué evidencia permitirá
+juzgar si la respuesta es útil.
+2.2 2. Diseñar la
+estructura y las reglas
+Cree en el repositorio del proyecto tres componentes
+diferenciados:
+fuentes/: copias o referencias estables a las fuentes
+originales, con procedencia, fecha, versión, permiso de uso y
+limitaciones. Conserve intactos los originales. Si los datos son
+sensibles, use extractos anonimizados o descripciones autorizadas.
+wiki/: páginas Markdown generadas o actualizadas con
+ayuda de IA. Incluya como mínimo un índice, páginas de fuentes,
+definiciones de indicadores y una síntesis vinculada a los objetivos
+BI.
+Un archivo de instrucciones para el agente, por ejemplo
+AGENTS.md o INSTRUCCIONES_WIKI.md, que
+establezca estructura, formato, reglas de citas y enlaces, criterios
+para actualizar páginas, tratamiento de contradicciones y controles de
+privacidad. Agregue wiki/log.md como registro cronológico
+de operaciones.
+Cada afirmación relevante de la wiki debe permitir rastrear su fuente
+y, cuando corresponda, la versión o fecha de los datos. Distinga datos
+observados, inferencias, supuestos y resultados esperados. Defina al
+menos un indicador con fórmula, unidad, granularidad, período y
+filtros.
+2.3 3. Mejorar el prompt
+y ejecutar una primera ingesta
+Adapte el prompt sugerido de la sección siguiente: complete los
+campos, incorpore las particularidades de su negocio y precise criterios
+de aceptación. Conserve el prompt inicial, la versión mejorada y una
+explicación breve de los cambios. Ejecute una ingesta de al
+menos dos evidencias pertinentes (por ejemplo, diccionario de
+datos y muestra autorizada; requerimientos y reporte previo). Si solo
+existe una fuente de datos, use como segunda evidencia una descripción
+del objetivo, una definición de KPI o un resultado esperado, claramente
+identificada como tal.
+Revise las modificaciones propuestas por la IA antes de aceptarlas.
+Actualice el índice y el registro de actividad. Muestre qué páginas se
+crearon o modificaron y qué aportó cada evidencia al objetivo BI.
+2.4 4. Consultar,
+verificar y conservar la respuesta
+Formule la pregunta de negocio definida en el paso 1. Pida al agente
+que consulte primero el índice y las páginas pertinentes, responda con
+enlaces a la evidencia y señale vacíos o incertidumbres. Verifique
+al menos tres afirmaciones de la respuesta contra las
+fuentes originales o cálculos reproducibles. Corrija los errores
+detectados. Guarde la respuesta revisada como página de la wiki y
+enlácela desde el índice.
+2.5 5. Revisar la salud
+de la wiki e iterar
+Solicite una revisión de enlaces rotos, páginas aisladas, duplicados,
+contradicciones, afirmaciones sin fuente, indicadores ambiguos y datos
+desactualizados. Registre los hallazgos, corrija los que pueda y
+justifique los pendientes. Incorpore una evidencia nueva o una
+corrección de evidencia y demuestre qué páginas, enlaces y conclusiones
+cambian después de la segunda ingesta. Si la nueva evidencia contradice
+una anterior, conserve ambas referencias y explique la resolución o el
+estado pendiente.
+2.6 6. Responder los
+pasos consiguientes
+En un informe final, responda explícitamente:
+¿Qué decisión BI puede apoyarse ahora con la wiki y cuál sigue sin
+suficiente evidencia?
+¿Qué hallazgo cambió entre la primera y la segunda ingesta? Si no
+cambió, ¿qué se confirmó y con qué evidencia?
+¿Qué fuentes, cálculos o validaciones faltan para alcanzar cada
+resultado esperado?
+¿Cuáles son los tres siguientes pasos, en orden de
+prioridad, con responsable, insumo necesario, producto verificable y
+criterio de finalización?
+¿Cómo se mantendrá actualizada la wiki cuando cambien datos,
+definiciones o resultados?
+3 Prompt genérico
+sugerido para mejorar
+Copie este texto y mejórelo antes de utilizarlo.
+Sustituya los campos entre corchetes por información real de su
+proyecto. Agregue reglas específicas para sus indicadores, fuentes y
+decisiones.
+Actúa como asistente de documentación y análisis del proyecto BI
+[nombre]. Sus objetivos son
+[objetivos]; la decisión que debe apoyar es
+[decisión y usuario]; las fuentes autorizadas son
+[rutas, versiones y restricciones]; y los resultados
+esperados son [resultados]. Implementa y mantén una
+wiki Markdown en wiki/ con índice, páginas de fuentes,
+indicadores, hallazgos y log.md. Lee las fuentes en
+fuentes/ sin modificarlas. Antes de crear una página, busca
+si ya existe una que debas actualizar. Para cada afirmación sustantiva,
+enlaza la fuente y registra fecha o versión; separa hechos, cálculos,
+inferencias y supuestos. Define los KPI con fórmula, unidad,
+granularidad, período y filtros. Primero propone la estructura y las
+reglas del agente; después ingiere [evidencias],
+actualiza páginas e índice, responde [pregunta de
+negocio] con evidencia y ejecuta una revisión de consistencia.
+Señala contradicciones y vacíos sin inventar datos. Resume los cambios
+en el registro y entrega: (1) archivos modificados, (2) respuesta
+verificable a la pregunta, (3) errores o incertidumbres, y (4) tres
+pasos siguientes priorizados con criterios de finalización. Solicita
+revisión humana antes de incorporar conclusiones que afecten decisiones
+del negocio.
+4 Entrega
+Entregue el repositorio o una carpeta comprimida con
+fuentes/ (o referencias autorizadas), wiki/,
+archivo de instrucciones, prompts inicial y mejorado, y un informe
+breve. El informe debe incluir el mapa objetivo → fuente → indicador →
+página → decisión; evidencias de las dos ingestas, la consulta y la
+revisión; las tres verificaciones de afirmaciones; una comparación
+antes/después de la iteración; y las respuestas del paso 6. Incluya
+instrucciones mínimas para reproducir los cálculos o verificaciones.
+5 Rúbrica de evaluación
+(100 puntos)
+Criterio
+Evidencia observable para obtener el puntaje
+completo
+Puntos
+Alineación con el proyecto BI
+Objetivos, decisión, usuario, resultados esperados y
+pregunta verificable están conectados explícitamente; el mapa objetivo →
+evidencia → indicador → decisión es coherente.
+15
+Arquitectura y reglas de la wiki
+Existen fuentes conservadas, wiki enlazada, índice,
+registro y archivo de instrucciones; las reglas cubren actualización,
+citas, contradicciones y privacidad.
+15
+Prompt adaptado y justificado
+Presenta prompt inicial y versión mejorada con
+información específica del proyecto, criterios de aceptación y
+explicación de cambios.
+10
+Ingesta y trazabilidad
+Integra dos evidencias iniciales y una nueva o
+corregida; registra procedencia y versiones, actualiza páginas
+pertinentes, índice y log; diferencia hechos de inferencias.
+15
+Calidad semántica y analítica
+Define al menos un KPI con fórmula, unidad,
+granularidad, período y filtros; los hallazgos y cálculos son
+consistentes con las fuentes y objetivos.
+10
+Consulta y verificación
+Responde la pregunta con enlaces precisos, verifica
+tres afirmaciones contra fuentes o cálculos reproducibles, corrige
+errores y guarda la respuesta revisada.
+15
+Revisión e iteración
+Detecta problemas de enlaces, duplicación,
+contradicción, vigencia o evidencia; corrige o justifica pendientes y
+muestra cambios entre ingestas.
+10
+Próximos pasos y reproducibilidad
+Responde las cinco preguntas del paso 6, prioriza tres
+acciones con responsables y criterios de cierre, y permite reproducir
+las verificaciones.
+10
+Total
+100
+Se asigna los puntos de forma proporcional a la evidencia demostrada:
+100 % del criterio si está completo y verificable;
+50 % si existe pero es parcial o presenta fallas
+importantes; 0 % si no se presenta o no puede
+comprobarse. Se pueden usar valores intermedios justificados. Una salida
+generada por IA sin revisión ni trazabilidad no demuestra por sí sola
+cumplimiento.

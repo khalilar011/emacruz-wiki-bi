@@ -1,0 +1,119 @@
+{
+  "inicio": "2026-11-03T21:05:36-04:00",
+  "fin": "2026-11-03T21:05:36-04:00",
+  "archivos": [
+    {
+      "ruta": "fuentes/originales/README.md",
+      "origen": "C:\\Users\\khali\\OneDrive\\Desktop\\Universidad\\6to Sem (actual)\\Proyecto integrador\\proyecto-emacruz\\README.md",
+      "consulta": "2026-11-03T21:05:36-04:00",
+      "sha256": "dd0c007fd49dd3d2912ec3065f97460f16966a6fdf177901397cb2b53567456c",
+      "identica_origen": true,
+      "tipo": "copia local",
+      "version": "29a44d875600d3ddc88fb53bafce80469902ce50"
+    },
+    {
+      "ruta": "fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx",
+      "origen": "C:\\Users\\khali\\OneDrive\\Desktop\\Universidad\\6to Sem (actual)\\Proyecto integrador\\proyecto-emacruz\\data\\Base_Emacruz_sectores_y_frecuencias.xlsx",
+      "consulta": "2026-11-03T21:05:36-04:00",
+      "sha256": "cbc88d35f868abb898139e0e11f64dc134754a644d90430807ad701cae39b59a",
+      "identica_origen": true,
+      "tipo": "copia local",
+      "version": "29a44d875600d3ddc88fb53bafce80469902ce50"
+    },
+    {
+      "ruta": "fuentes/referencia_remota/AGENTS.md",
+      "origen": "https://github.com/khalilar011/proyecto-emacruz/blob/5fba63ec96844fa1373b6c5703fce54430b52de8/AGENTS.md",
+      "consulta": "2026-11-03T21:05:36-04:00",
+      "sha256": "8d9a14abd2a12cf4e08cdf7f72198dde62a242fb84f499764a00a647436069c7",
+      "git_blob_sha1": "6a2fdf09f5c9dd81dde3adc01f8ef29753c3d49c",
+      "version": "5fba63ec96844fa1373b6c5703fce54430b52de8",
+      "tipo": "GitHub conector, base64"
+    },
+    {
+      "ruta": "fuentes/referencia_remota/README.md",
+      "origen": "https://github.com/khalilar011/proyecto-emacruz/blob/5fba63ec96844fa1373b6c5703fce54430b52de8/README.md",
+      "consulta": "2026-11-03T21:05:36-04:00",
+      "sha256": "dd0c007fd49dd3d2912ec3065f97460f16966a6fdf177901397cb2b53567456c",
+      "git_blob_sha1": "3b34cea1348b49c159a826435efc9d3ce53d77c5",
+      "version": "5fba63ec96844fa1373b6c5703fce54430b52de8",
+      "tipo": "GitHub conector, base64"
+    },
+    {
+      "ruta": "fuentes/referencia_remota/data/README.md",
+      "origen": "https://github.com/khalilar011/proyecto-emacruz/blob/5fba63ec96844fa1373b6c5703fce54430b52de8/data/README.md",
+      "consulta": "2026-11-03T21:05:36-04:00",
+      "sha256": "dd6727c4fabfa101056c4c817aa564ff38869b2aa90c54788e0ff011652a5eb2",
+      "git_blob_sha1": "5b847fa45da1db9f4108efb9fd299db4c6e28a06",
+      "version": "5fba63ec96844fa1373b6c5703fce54430b52de8",
+      "tipo": "GitHub conector, base64"
+    },
+    {
+      "ruta": "fuentes/referencia_remota/docs/fuentes-datos.md",
+      "origen": "https://github.com/khalilar011/proyecto-emacruz/blob/5fba63ec96844fa1373b6c5703fce54430b52de8/docs/fuentes-datos.md",
+      "consulta": "2026-11-03T21:05:36-04:00",
+      "sha256": "2a66622e937ead02d92b78531be797c6458b8e574d71af7151ccea4b74648297",
+      "git_blob_sha1": "1936aaef9a53be71ab7e6325649ccc10c32dc438",
+      "version": "5fba63ec96844fa1373b6c5703fce54430b52de8",
+      "tipo": "GitHub conector, base64"
+    },
+    {
+      "ruta": "fuentes/referencia_remota/docs/plan-crisp-dm.md",
+      "origen": "https://github.com/khalilar011/proyecto-emacruz/blob/5fba63ec96844fa1373b6c5703fce54430b52de8/docs/plan-crisp-dm.md",
+      "consulta": "2026-11-03T21:05:36-04:00",
+      "sha256": "e8d7616211b4343c0cf4c33c6e844fe181d0c74b1058b076f35d25acb02cbf3f",
+      "git_blob_sha1": "613f7ade292bc4d6e7ce6d22b16aa33d5555beb4",
+      "version": "5fba63ec96844fa1373b6c5703fce54430b52de8",
+      "tipo": "GitHub conector, base64"
+    },
+    {
+      "ruta": "fuentes/referencia_remota/docs/historias/SCRUM-22.md",
+      "origen": "https://github.com/khalilar011/proyecto-emacruz/blob/5fba63ec96844fa1373b6c5703fce54430b52de8/docs/historias/SCRUM-22.md",
+      "consulta": "2026-11-03T21:05:36-04:00",
+      "sha256": "fb2f62a1d508367b77445aa5bc0827060e545dcb168ca61fcc1db3db3ae104d0",
+      "git_blob_sha1": "cf9a42ca8e5cfdfb3071c14375d8da93f561112e",
+      "version": "5fba63ec96844fa1373b6c5703fce54430b52de8",
+      "tipo": "GitHub conector, base64"
+    },
+    {
+      "ruta": "fuentes/consigna/Tarea_wiki_IA_proyecto_BI.html",
+      "origen": "C:\\Users\\khali\\Downloads\\Tarea_wiki_IA_proyecto_BI.html",
+      "consulta": "2026-11-03T21:05:36-04:00",
+      "sha256": "d99450eb92e7a1cf611e6c06bb2262b1e17510a2c4d93815a96fe877b8230fc6",
+      "identica_origen": true,
+      "version": "2026-11-03, metadato del HTML",
+      "tipo": "consigna docente local"
+    },
+    {
+      "ruta": "fuentes/referencia_remota/web/data/frecuencias.json",
+      "origen": "https://github.com/khalilar011/proyecto-emacruz/blob/5fba63ec96844fa1373b6c5703fce54430b52de8/web/data/frecuencias.json",
+      "consulta": "2026-11-03T21:15:30-04:00",
+      "sha256": "b4c5f3d2bccffc5e7b530ff27a9fa00c175167ff039b95305815a3d0a7ce298c",
+      "git_blob_sha1": "f63a351a8a1e67073008c469ef75d315874f9412",
+      "version": "5fba63ec96844fa1373b6c5703fce54430b52de8",
+      "tipo": "GitHub conector, base64",
+      "ingesta": 2,
+      "relacion": "JSON derivado de Excel; exportador documenta transformación"
+    },
+    {
+      "ruta": "fuentes/referencia_remota/scripts/export_web_data.py",
+      "origen": "https://github.com/khalilar011/proyecto-emacruz/blob/5fba63ec96844fa1373b6c5703fce54430b52de8/scripts/export_web_data.py",
+      "consulta": "2026-11-03T21:15:30-04:00",
+      "sha256": "f910c4ffc1d965c988f995419c7125f7f5825a4790b9b5a78c0b874b6d8ce788",
+      "git_blob_sha1": "00b9da5bacc676d19895b2603d325ba0bc446b55",
+      "version": "5fba63ec96844fa1373b6c5703fce54430b52de8",
+      "tipo": "GitHub conector, base64",
+      "ingesta": 2,
+      "relacion": "JSON derivado de Excel; exportador documenta transformación"
+    }
+  ],
+  "excel_git_blob_local": "bfe85854309cf0d622b566991b4a9e29831c1ed5",
+  "excel_git_blob_remoto": "bfe85854309cf0d622b566991b4a9e29831c1ed5",
+  "original_path": "C:\\Users\\khali\\OneDrive\\Desktop\\Universidad\\6to Sem (actual)\\Proyecto integrador\\proyecto-emacruz",
+  "original_state": {
+    ".gitignore": "0e63c149df21000290d7b0a00d80cb72e6af1ae25c4f736030d796385340e666",
+    "data/Base_Emacruz_sectores_y_frecuencias.xlsx": "cbc88d35f868abb898139e0e11f64dc134754a644d90430807ad701cae39b59a",
+    "README.md": "dd0c007fd49dd3d2912ec3065f97460f16966a6fdf177901397cb2b53567456c"
+  },
+  "remote_commit": "5fba63ec96844fa1373b6c5703fce54430b52de8",
+  "segunda_incorporacion": "2026-11-03T21:15:30-04:00"
+}

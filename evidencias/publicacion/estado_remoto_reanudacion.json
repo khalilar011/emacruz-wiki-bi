@@ -1,0 +1,36 @@
+{
+  "registrado": "2026-11-05T03:07:32-04:00",
+  "naturaleza": "Registro de resultados observados al reanudar; no es confirmación de publicación.",
+  "repositorio_objetivo": "khalilar011/emacruz-wiki-bi",
+  "url_objetivo": "https://github.com/khalilar011/emacruz-wiki-bi",
+  "visibilidad_solicitada": "privado",
+  "rama_local": "main",
+  "commit_local": null,
+  "origin_configurado": false,
+  "archivos_preparados": 0,
+  "gh_auth_status": {
+    "exit_code": 1,
+    "resultado": "La CLI informa token inválido; no se puede corroborar por el bloqueo de red."
+  },
+  "gh_repo_view": {
+    "exit_code": 1,
+    "resultado": "Conexión de socket a api.github.com:443 no permitida."
+  },
+  "conector_github": {
+    "http_status": 404,
+    "resultado": "Repositorio inexistente o no accesible para la instalación; el conector carece de operación de creación."
+  },
+  "git_add": {
+    "exit_code_shell": 1,
+    "resultado": "Unable to create .git/index.lock: Permission denied"
+  },
+  "restriccion_git": "Fallaron también escrituras en .git/config; no se intentó eludir las restricciones.",
+  "navegador_intento_anterior": {
+    "resultado": "Rechazo de revisión automática",
+    "motivo": "Computer Use was not approved to use Google Chrome"
+  },
+  "push_realizado": false,
+  "commit_remoto": null,
+  "verificacion_remota": "Pendiente; no se afirma éxito.",
+  "informe_academico_generado": false
+}

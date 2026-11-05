@@ -1,0 +1,309 @@
+{
+  "ejecutado": "2026-11-03T21:21:39-04:00",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "checks": [
+    {
+      "comprobacion": "Archivos obligatorios presentes y no vacíos",
+      "cumple": true,
+      "detalle": []
+    },
+    {
+      "comprobacion": "Componentes poblados",
+      "cumple": true,
+      "detalle": [
+        "fuentes",
+        "wiki",
+        "prompts",
+        "scripts",
+        "docs",
+        "evidencias/primera_ingesta",
+        "evidencias/consulta_y_verificaciones",
+        "evidencias/segunda_ingesta",
+        "evidencias/revision"
+      ]
+    },
+    {
+      "comprobacion": "SHA-256 y blobs Git de fuentes preservadas",
+      "cumple": true,
+      "detalle": [
+        {
+          "ruta": "fuentes/originales/README.md",
+          "coincide": true
+        },
+        {
+          "ruta": "fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx",
+          "coincide": true
+        },
+        {
+          "ruta": "fuentes/referencia_remota/AGENTS.md",
+          "coincide": true
+        },
+        {
+          "ruta": "fuentes/referencia_remota/README.md",
+          "coincide": true
+        },
+        {
+          "ruta": "fuentes/referencia_remota/data/README.md",
+          "coincide": true
+        },
+        {
+          "ruta": "fuentes/referencia_remota/docs/fuentes-datos.md",
+          "coincide": true
+        },
+        {
+          "ruta": "fuentes/referencia_remota/docs/plan-crisp-dm.md",
+          "coincide": true
+        },
+        {
+          "ruta": "fuentes/referencia_remota/docs/historias/SCRUM-22.md",
+          "coincide": true
+        },
+        {
+          "ruta": "fuentes/consigna/Tarea_wiki_IA_proyecto_BI.html",
+          "coincide": true
+        },
+        {
+          "ruta": "fuentes/referencia_remota/web/data/frecuencias.json",
+          "coincide": true
+        },
+        {
+          "ruta": "fuentes/referencia_remota/scripts/export_web_data.py",
+          "coincide": true
+        }
+      ]
+    },
+    {
+      "comprobacion": "Original de proyecto-emacruz intacto",
+      "cumple": true,
+      "detalle": {
+        "disponible": true,
+        "coincide": true,
+        "archivos": [
+          ".gitignore",
+          "README.md",
+          "data/Base_Emacruz_sectores_y_frecuencias.xlsx"
+        ],
+        "alcance": "Archivos de trabajo fuera de .git. Solo se ejecutaron lecturas; no se hizo fetch en repositorio original."
+      }
+    },
+    {
+      "comprobacion": "ZIP y hashes íntegros",
+      "cumple": true,
+      "detalle": [
+        {
+          "etapa": "primera_ingesta",
+          "fecha": "2026-11-03T21:10:52-04:00",
+          "cumple": true
+        },
+        {
+          "etapa": "segunda_ingesta/antes",
+          "fecha": "2026-11-03T21:14:22-04:00",
+          "cumple": true
+        },
+        {
+          "etapa": "segunda_ingesta/despues",
+          "fecha": "2026-11-03T21:21:34-04:00",
+          "cumple": true
+        }
+      ]
+    },
+    {
+      "comprobacion": "Dos ingestas distintas y orden real",
+      "cumple": true,
+      "detalle": {
+        "fechas_ordenadas": [
+          "2026-11-03T21:10:52-04:00",
+          "2026-11-03T21:12:23-04:00",
+          "2026-11-03T21:14:22-04:00",
+          "2026-11-03T21:15:30-04:00",
+          "2026-11-03T21:21:34-04:00"
+        ],
+        "json_ausente_primera": true,
+        "json_presente_segunda": true
+      }
+    },
+    {
+      "comprobacion": "Consulta leyó primero índice",
+      "cumple": true,
+      "detalle": [
+        {
+          "ruta": "wiki/index.md",
+          "leido": "2026-11-03T21:12:23-04:00",
+          "sha256": "da69cac30f5ffc573fa5cd7fe7d500758ba52fb7eb49fdb729d16dd1dfa9e976",
+          "caracteres": 958
+        },
+        {
+          "ruta": "wiki/objetivos.md",
+          "leido": "2026-11-03T21:12:23-04:00",
+          "sha256": "81dfb618f9ef1fcdc872d7d502847728abc258dac70c810c4ab8aafd49834dcc",
+          "caracteres": 2880
+        },
+        {
+          "ruta": "wiki/fuentes.md",
+          "leido": "2026-11-03T21:12:23-04:00",
+          "sha256": "f104e367d5c6d6f59bcf759b2ae9525a63a9da6d26fd2c98be823835859bd92c",
+          "caracteres": 2231
+        },
+        {
+          "ruta": "wiki/indicadores.md",
+          "leido": "2026-11-03T21:12:23-04:00",
+          "sha256": "025da9131aeb2567ba8eecc5114e0f89a1c97766bfc183d74990b0de95c5136d",
+          "caracteres": 4408
+        },
+        {
+          "ruta": "wiki/hallazgos.md",
+          "leido": "2026-11-03T21:12:23-04:00",
+          "sha256": "52a6097e861f7548e47f9a85a771d932abc12bc0fb4883656085cafee24bc16a",
+          "caracteres": 2685
+        },
+        {
+          "ruta": "wiki/diccionario_datos.md",
+          "leido": "2026-11-03T21:12:23-04:00",
+          "sha256": "bd665bd49e71f158cbd5badcf99fe75eada523fcd7763bcc82011a937dabe9af",
+          "caracteres": 3900
+        }
+      ]
+    },
+    {
+      "comprobacion": "Tres afirmaciones contrastadas",
+      "cumple": true,
+      "detalle": [
+        {
+          "id": "V1",
+          "estado": "confirmada",
+          "observado": 21
+        },
+        {
+          "id": "V2",
+          "estado": "confirmada",
+          "observado": 15
+        },
+        {
+          "id": "V3",
+          "estado": "confirmada",
+          "observado": {
+            "numerador": 6,
+            "denominador": 21,
+            "ids": [
+              "F07",
+              "F08",
+              "F09",
+              "F10",
+              "F11",
+              "F12"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "comprobacion": "Comparación Excel JSON ejecutada",
+      "cumple": true,
+      "detalle": {
+        "comparaciones": 399,
+        "diferencias": []
+      }
+    },
+    {
+      "comprobacion": "Resultados consistentes entre ingestas",
+      "cumple": true,
+      "detalle": {
+        "excel_sha256": true,
+        "regla": true,
+        "numerador": true,
+        "total_evaluables": true,
+        "ids_cumplen": true,
+        "faltantes": true
+      }
+    },
+    {
+      "comprobacion": "Prompt docente íntegro y campos originales",
+      "cumple": true,
+      "detalle": {
+        "comparacion": "Bloque de cita HTML normalizando solo espacios de presentación",
+        "caracteres": 1251
+      }
+    },
+    {
+      "comprobacion": "Cinco preguntas y pasos priorizados desarrollados",
+      "cumple": true,
+      "detalle": {
+        "preguntas": 5
+      }
+    },
+    {
+      "comprobacion": "Ocho criterios con estado sin nota asignada",
+      "cumple": true,
+      "detalle": {
+        "criterios": 8
+      }
+    },
+    {
+      "comprobacion": "Markdown desarrollado sin relleno o archivos vacíos",
+      "cumple": true,
+      "detalle": []
+    },
+    {
+      "comprobacion": "Aprobación humana explícitamente pendiente",
+      "cumple": true,
+      "detalle": {
+        "estado": "Pendiente, sin firmas o aprobaciones inventadas"
+      }
+    },
+    {
+      "comprobacion": "Sin Git, informe Word/PDF o despliegue",
+      "cumple": true,
+      "detalle": {
+        "git_local": false,
+        "word_pdf": [],
+        "publicacion": "No se ejecutó publicación; el código no la implementa."
+      }
+    },
+    {
+      "comprobacion": "Sintaxis de todos los scripts Python",
+      "cumple": true,
+      "detalle": []
+    },
+    {
+      "comprobacion": "Diferencias reales diferencias_desde_primera",
+      "cumple": true,
+      "detalle": {
+        "creados": 18,
+        "modificados": 12,
+        "paginas_con_enlaces": 15
+      }
+    },
+    {
+      "comprobacion": "Diferencias reales diferencias_desde_antes",
+      "cumple": true,
+      "detalle": {
+        "creados": 13,
+        "modificados": 13,
+        "paginas_con_enlaces": 15
+      }
+    },
+    {
+      "comprobacion": "Enlaces locales y páginas wiki accesibles",
+      "cumple": false,
+      "detalle": {
+        "ejecutado": "2026-11-03T21:21:39-04:00",
+        "alcance": "Markdown propio en raíz/wiki/docs/prompts/evidencias y fuentes/procedencia; se excluyen copias originales, enlaces web y archivos dentro de ZIP. Comprueba destinos de archivo, no anclas HTML externas.",
+        "paginas": 28,
+        "enlaces_locales": 319,
+        "rotos": [
+          {
+            "origen": "README.md",
+            "enlace": "evidencias/revision/validacion_final/proyecto.json"
+          }
+        ],
+        "aisladas_wiki": [],
+        "duplicados_exactos": [],
+        "cumple": false
+      }
+    }
+  ],
+  "total": 20,
+  "aprobadas": 19,
+  "cumple": false,
+  "limite": "Controles automáticos y revisión IA de contenido. No certifica vigencia o permiso institucional ni aceptación humana."
+}

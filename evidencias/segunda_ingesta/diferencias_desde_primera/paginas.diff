@@ -1,0 +1,442 @@
+--- antes/README.md
++++ despues/README.md
+@@ -2,31 +2,73 @@
+ 
+ Implementación académica independiente de Alerta Ruta, Business Intelligence II, Unidad 3, consigna 03/11/2026. Navegación: [wiki/index.md](wiki/index.md). La programación publicada permite diagnosticar calidad documental; no acredita servicio ejecutado, vigencia institucional ni predicción de acumulación.
+ 
+-La primera ingesta incorpora Excel y objetivos/documentación existentes. Se conserva una instantánea antes de la consulta y de incorporar JSON. Las conclusiones propuestas requieren [revisión humana](docs/revision_humana.md). El informe académico final y GitHub están reservados para otra tarea.
++Se ejecutaron dos ingestas reales: primero Excel y objetivos/documentación; después, JSON y exportador de Alerta Ruta. Los estados se preservaron antes de consultar/auditar e incorporar la segunda evidencia. Las conclusiones propuestas requieren [revisión humana](docs/revision_humana.md). El informe académico final y GitHub están reservados para otra tarea. No se creó Git en esta carpeta ni se modificó el repositorio original.
+ 
+ ## Estructura
+ 
+ ```text
+ emacruz-wiki-bi/
+   fuentes/      originales, documentación remota fijada, consigna y hashes
+-  wiki/         índice, objetivos, fuentes, diccionario, KPI, hallazgos y log
++  wiki/         índice, objetivos, fuentes, diccionario, KPI, hallazgos,
++                consulta, comparación, revisión, respuestas del paso 6 y log
+   prompts/      original docente, versión EMACRUZ y justificación
+-  evidencias/   primera ingesta, consulta, segunda ingesta y revisión
+-  scripts/      lectura, cálculo y conservación de estados
+-  docs/         decisiones, mapa de trazabilidad y revisión humana
++  evidencias/   primera_ingesta/ (inspección, cálculo y estado.zip)
++                consulta_y_verificaciones/ (inicial y tres contrastes)
++                segunda_ingesta/ (antes/después, comparación y diffs)
++                revision/ (auditorías y validación_final/)
++  scripts/      lectura, cálculos, verificaciones, enlaces y reproducción
++  docs/         decisiones, mapa, comparación, rúbrica y revisión humana
+   AGENTS.md
+   README.md
+   requirements.txt
+   .gitignore
+ ```
+ 
+-## Reproducción
++## Fuentes y resultados reales
++
++Excel y README copiados del repositorio local original (commit 29a44d875600d3ddc88fb53bafce80469902ce50). Documentación, JSON y exportador recuperados de [GitHub](https://github.com/khalilar011/proyecto-emacruz/tree/5fba63ec96844fa1373b6c5703fce54430b52de8), fijados al commit 5fba63ec96844fa1373b6c5703fce54430b52de8. El blob del Excel local coincide con el remoto. HTML docente de Downloads, versión declarada 03/11/2026. [Procedencia y permisos](fuentes/procedencia.md), [hashes y rutas exactas](fuentes/manifiesto.json).
++
++El Excel contiene Frecuencias (21 filas), Distritos (16), Servicios (11) y Fuentes (13 filas no vacías: siete imágenes referenciadas y seis criterios). El KPI de programación semanal completa y válida es **6/21 = 28,57 %**, IDs F07–F12. Quince carecen de Fin, nueve de Inicio, seis de sector y una de zona; 21/21 patrones semanales concuerdan. Se reconocieron cuatro cruces nocturnos explícitos. Cero IDs duplicados y cero filas exactamente duplicadas. [Definición, filtros y límites](wiki/indicadores.md), [detalle por fila](evidencias/primera_ingesta/calculo_v1/registros_evaluados.csv).
++
++Las tres afirmaciones comprobadas (21 filas, 15 sin Fin y 6/21 con IDs) quedaron confirmadas por lectura XML independiente. La segunda ingesta contrastó 399 valores, incluidos 378 valores originales y 21 coordenadas: **cero diferencias**, con proyección de bytes idéntica al JSON. El KPI permanece igual. [Consulta](wiki/consulta_negocio.md), [comparación de exportación](wiki/comparacion_exportacion.md), [antes/después](docs/comparacion_ingestas.md).
++
++No se mide cobertura ni cumplimiento real de recolección. Vigencia, permisos institucionales, imágenes originales, límites cartográficos y relación detallada distrito → frecuencia siguen sin acreditación suficiente. Su ausencia es un resultado del diagnóstico. Las fuentes existentes no bastan para predecir acumulación o medir toneladas. Las conclusiones son propuestas para revisión humana.
++
++## Instalación y reproducción
+ 
+ Python 3.10 o posterior; ejecución original con Python 3.14.3 en Windows. No requiere paquetes externos ni acceso de red para analizar las fuentes ya copiadas. Desde esta carpeta:
+ 
+ ```powershell
+ python --version
+-python -X utf8 scripts/analizar.py --salida salidas/analisis_nuevo
++# Opcional: entorno aislado, sin necesidad de activar scripts PowerShell.
++python -m venv .venv
++# requirements.txt contiene solo comentarios: no hay paquetes externos.
++.venv/Scripts/python.exe -m pip install -r requirements.txt
++python -X utf8 scripts/reproducir.py --salida salidas/reproduccion_01
+ ```
+ 
+-Usar una carpeta nueva en cada ejecución: los scripts no sobrescriben evidencias históricas. La captura inicial de fuentes es específica del entorno de esta sesión; los cálculos posteriores leen las copias portables. Ver [método](docs/decisiones_metodologicas.md) y [reglas](AGENTS.md). No crear Git ni publicar automáticamente. Las exclusiones de copias originales se revisarán junto con permisos antes de una publicación futura.
++La reproducción ejecuta análisis, tres verificaciones independientes, comparación Excel/JSON, diez controles de reglas y validación integral. Conserva comandos, fechas, stdout/stderr, códigos de salida y JSON de resultados. Se verifican además integridad de copias y ZIP, secuencia de ingestas, prompt contra HTML, estructura/contenido, ocho criterios y enlaces Markdown propios. Si el repositorio original está accesible, se comparan sus archivos de trabajo con los hashes iniciales. En otro equipo se utilizan las copias preservadas; el control del original se informa como no disponible, sin inventar una comprobación.
++
++Comandos individuales, desde raíz, usando nombres de salida nuevos:
++
++```powershell
++python -X utf8 scripts/analizar.py --salida salidas/analisis_nuevo
++python -X utf8 scripts/verificar_afirmaciones.py --salida salidas/contraste_nuevo
++python -X utf8 scripts/comparar_excel_json.py --salida salidas/comparacion_nueva
++python -X utf8 scripts/verificar_reglas.py --salida salidas/reglas_nuevas.json
++python -X utf8 scripts/auditar_enlaces.py --salida salidas/enlaces_nuevos.json
++python -X utf8 scripts/validar_proyecto.py --salida salidas/proyecto_nuevo.json
++python -X utf8 scripts/comparar_estados.py --antes evidencias/segunda_ingesta/antes --despues evidencias/segunda_ingesta/despues --salida salidas/diff_nuevo
++```
++
++Usar una carpeta nueva en cada ejecución: los scripts no sobrescriben evidencias históricas. El contraste independiente verifica las afirmaciones históricas guardadas. Para otra versión de datos hay que registrar nuevas afirmaciones antes de verificarlas y conservar las anteriores. Los scripts de primera/segunda ingesta son registro reproducible de preparación de esta sesión y rechazan reejecución sobre historia ya congelada. No regenerar dos ingestas desde un único estado final.
++
++La [validación ejecutada de cierre](evidencias/revision/validacion_final/resultado.json) y [controles detallados](evidencias/revision/validacion_final/proyecto.json) permiten revisar lo que efectivamente se ejecutó. La [matriz de cumplimiento](docs/matriz_cumplimiento.md) contiene los ocho criterios, evidencias y estado sin asignar nota docente. [Registro cronológico](wiki/log.md).
++
++## Errores corregidos y pendientes
++
++Se corrigió un paréntesis antes de ejecutar la preparación, el perfil que confundía 0 con ausencia (sin cambiar KPI), una errata del prompt sobre duplicados y cuatro enlaces relativos en la evidencia de verificaciones. Se conservan [análisis inicial con fallo](evidencias/primera_ingesta/calculo/analisis.json), [corrección](evidencias/primera_ingesta/calculo_v1/analisis.json), [auditoría fallida](evidencias/revision/enlaces_antes.json) y [repetición sin enlaces rotos](evidencias/revision/enlaces_corregidos.json).
++
++Pendientes humanos: aceptar cambios IA, aprobar reglas y conclusiones, confirmar vigencia/transcripción/territorio y permisos de publicación. Roles propuestos sin asignación ficticia en [revisión humana](docs/revision_humana.md) y [tres próximos pasos](wiki/respuestas_paso_6.md). El informe separado y la inicialización/publicación Git se harán después, por instrucción del usuario.
++
++Las fuentes y ZIP de estados contienen copias originales y metadatos heredados; `.gitignore` excluye esos archivos y respuestas base64 hasta revisar permisos. Esa exclusión no elimina la evidencia local ni acredita permiso. No copiar automáticamente todo a un futuro repositorio público. Ver [método](docs/decisiones_metodologicas.md) y [AGENTS](AGENTS.md).
+--- antes/docs/mapa_trazabilidad.md
++++ despues/docs/mapa_trazabilidad.md
+@@ -12,3 +12,7 @@
+ | Investigar factores de acumulación, contexto CRISP-DM | Plan existente; faltan mediciones de acumulación/diésel/operaciones | No calculable con las frecuencias | [Objetivos](../wiki/objetivos.md) | Diseñar futura captura de observaciones; no afirmar predicción |
+ 
+ [Decisiones](decisiones_metodologicas.md) · [Índice](../wiki/index.md)
++
++## Enlaces cerrados después de consulta e iteración
++
++Aplicar herramientas de análisis → [tres verificaciones](../evidencias/consulta_y_verificaciones/contraste/verificaciones.json) → [consulta revisada](../wiki/consulta_negocio.md) → priorizar registros con evidencia. Centralizar/analizar → [JSON y exportador](../wiki/comparacion_exportacion.md) → [399 comparaciones](../evidencias/segunda_ingesta/comparacion/comparacion.json) → conservar exportación fiel sin confundirla con vigencia. Generar información útil → [cinco respuestas y tres pasos](../wiki/respuestas_paso_6.md) → revisión y asignación humana pendientes.
+--- antes/fuentes/procedencia.md
++++ despues/fuentes/procedencia.md
+@@ -15,3 +15,9 @@
+ El árbol remoto localiza `web/data/frecuencias.json`, ausente localmente. Su contenido no se usa en esta primera ingesta. La segunda deberá documentar exportador y dependencia respecto al Excel antes de interpretar coincidencias.
+ 
+ [Fuentes de la wiki](../wiki/fuentes.md) · [Índice](../wiki/index.md)
++
++## Segunda ingesta: JSON y exportador
++
++Incorporación y consulta de esta sesión en [registro](../evidencias/segunda_ingesta/incorporacion.json). Se preservaron [frecuencias.json](referencia_remota/web/data/frecuencias.json) y [export_web_data.py](referencia_remota/scripts/export_web_data.py), commit 5fba63ec96844fa1373b6c5703fce54430b52de8. Se verificaron base64, blob Git y SHA-256, añadidos al [manifiesto](manifiesto.json).
++
++El exportador declara dependencia del Excel/hoja Frecuencias: renombra once campos, convierte siete banderas a booleanos y añade fila_origen. La [comparación ejecutada](../evidencias/segunda_ingesta/comparacion/comparacion.json) confirma 378 valores originales y 21 coordenadas, sin diferencias y con reproducción idéntica de bytes. Las otras tres hojas no se exportan. La equivalencia no constituye corroboración institucional independiente. El JSON no contiene hash del libro ni fecha de exportación; su anclaje en esta wiki es el commit y la comparación conservada. Permiso de redistribución/vigencia sigue no acreditado.
+--- antes/prompts/prompt_mejorado.md
++++ despues/prompts/prompt_mejorado.md
+@@ -8,7 +8,7 @@
+ 
+ Pregunta: “¿Qué tan completa y consistente es la información disponible sobre días y horarios de recolección por sector o zona, y qué registros requieren revisión antes de utilizarse en Alerta Ruta?” Consulta primero `wiki/index.md`, después fuentes, indicadores y hallazgos. Guarda respuesta inicial antes de verificar y respuesta revisada después.
+ 
+-Define KPI v1.0 antes de ejecutarlo: registros no vacíos de Frecuencias como denominador, conservando ausencias e incidencias. Exige ID único, sector o zona conocido, delimitación, turno Día/Noche, siete banderas binarias con algún día activo y concordancia exacta con texto interpretado, inicio/fin HH:MM y duración no nula. Acepta fin menor que inicio solo para Noche con nota explícita de madrugada siguiente. Considera “No indicado/a/os/as” y “No indicada en fila” ausencias semánticas. Excluye del numerador todos los IDs/f filas exactamente duplicados, sin eliminar denominador ni originales. Feriados y distrito se diagnostican aparte: el KPI representa programación semanal ordinaria y no vigencia oficial ni cobertura operativa. Publica numerador, denominador, porcentaje y desglose por sector/zona/turno; marca reglas como propuesta académica pendiente de aprobación.
++Define KPI v1.0 antes de ejecutarlo: registros no vacíos de Frecuencias como denominador, conservando ausencias e incidencias. Exige ID único, sector o zona conocido, delimitación, turno Día/Noche, siete banderas binarias con algún día activo y concordancia exacta con texto interpretado, inicio/fin HH:MM y duración no nula. Acepta fin menor que inicio solo para Noche con nota explícita de madrugada siguiente. Considera “No indicado/a/os/as” y “No indicada en fila” ausencias semánticas. Excluye del numerador todos los integrantes de grupos con ID repetido o filas exactamente duplicadas, sin eliminar denominador ni originales. Feriados y distrito se diagnostican aparte: el KPI representa programación semanal ordinaria y no vigencia oficial ni cobertura operativa. Publica numerador, denominador, porcentaje y desglose por sector/zona/turno; marca reglas como propuesta académica pendiente de aprobación.
+ 
+ Antes de crear una página, busca la existente. Cita fuente/hoja/fila o cálculo y versión en cada afirmación sustantiva. Diferencia observaciones, cálculos, inferencias, supuestos y resultados esperados. No asignes zonas o distritos por intuición ni fusiones avisos generales con sectorizados. Si hay contradicción, conserva las referencias y explica qué evidencia falta.
+ 
+--- antes/wiki/diccionario_datos.md
++++ despues/wiki/diccionario_datos.md
+@@ -44,3 +44,16 @@
+ `_fila_excel` es un campo técnico añadido por el lector, no una columna original. Se preservan valores fuente; las ausencias semánticas y controles se aplican solo en derivados. No se unen automáticamente Distritos y Frecuencias por sector.
+ 
+ [Indicadores](indicadores.md) · [Fuentes](fuentes.md) · [Índice](index.md)
++
++## Versión 2.0: representación JSON
++
++El [exportador original](../fuentes/referencia_remota/scripts/export_web_data.py) contiene FIELD_MAP y DAY_MAP. Se comparó su mapeo usando AST sin ejecutarlo ni cambiarlo. [Comparador](../scripts/comparar_excel_json.py), [resultado](../evidencias/segunda_ingesta/comparacion/comparacion.json).
++
++| Excel | JSON | Transformación |
++| --- | --- | --- |
++| ID, Sector publicado, Zona, Delimitación / área, Distritos indicados | id, sector, zona, area, distritos | Texto, espacios de extremos eliminados |
++| Días publicados, Feriados, Turno, Inicio, Fin, Nota de revisión | dias_publicados, feriados, turno, inicio, fin, nota_revision | Texto; nulo/vacío se representaría No indicado |
++| Lun, Mar, Mié, Jue, Vie, Sáb, Dom | dias.lun/mar/mie/jue/vie/sab/dom | Entero 0/1 → booleano false/true en esta base |
++| Coordenada física de fila | fila_origen | Entero de fila original, de 2 a 22 |
++
++Metadatos del contenedor: fuente (nombre del libro), hoja (Frecuencias), total_registros (21), frecuencias (lista). No hay campos de vigencia, fecha de exportación ni hash del Excel. El exportador acepta otras marcas de días y convierte un día nulo a false; la base actual usa exclusivamente enteros 0/1, por lo que esa pérdida potencial no ocurrió en los registros comparados. Si cambia el dominio, debe revisarse el exportador y no convertir desconocido en día negativo por defecto.
+--- antes/wiki/fuentes.md
++++ despues/wiki/fuentes.md
+@@ -16,3 +16,9 @@
+ La documentación de [datos](../fuentes/referencia_remota/data/README.md), [registro de fuentes](../fuentes/referencia_remota/docs/fuentes-datos.md) e [historia SCRUM-22](../fuentes/referencia_remota/docs/historias/SCRUM-22.md) exige conservar ausencias y reconocer vigencia no acreditada. El JSON localizado remotamente se reserva para una segunda ingesta y aún no aporta resultados a esta página.
+ 
+ [Diccionario](diccionario_datos.md) · [Indicadores](indicadores.md) · [Índice](index.md)
++
++## Versión 2.0: evidencia técnica incorporada
++
++El párrafo que reservaba el JSON describe el estado histórico de la primera ingesta. Ahora se incorporó [JSON original](../fuentes/referencia_remota/web/data/frecuencias.json) y [exportador](../fuentes/referencia_remota/scripts/export_web_data.py) del commit remoto fijado. Se conserva el estado anterior en [instantánea previa](../evidencias/segunda_ingesta/antes/estado.json).
++
++JSON y Excel tienen 21 registros y los mismos IDs/orden. Se contrastaron las 18 variables originales y fila_origen (399 valores en total) sin diferencias. No se omite ninguna columna de Frecuencias, pero Distritos, Servicios y Fuentes no forman parte del JSON. La wiki preserva ese contexto que el derivado no incluye. [Prueba de equivalencia](../evidencias/segunda_ingesta/comparacion/comparacion.json), [mapeo y límites](comparacion_exportacion.md).
+--- antes/wiki/hallazgos.md
++++ despues/wiki/hallazgos.md
+@@ -18,3 +18,11 @@
+ **Incertidumbre:** sin las imágenes originales no se pueden validar transcripción, polígonos ni vigencia. Fuentes no incorpora una clave de imagen por cada fila de frecuencia; no se crea una relación exacta inventada. README y CRISP-DM no son fuentes de medición operativa.
+ 
+ [Fuentes](fuentes.md) · [Objetivos](objetivos.md) · [Índice](index.md)
++
++## Versión 2.0: qué confirmó la evidencia nueva
++
++**Cálculo/observación técnica:** el [JSON incorporado](../fuentes/referencia_remota/web/data/frecuencias.json) conserva las 21 filas, las ausencias horarias y las notas de medianoche. Hubo 0 diferencias en 399 valores comparados; la proyección coincide byte por byte. [Resultado reproducible](../evidencias/segunda_ingesta/comparacion/comparacion.json).
++
++**Cambio de conocimiento:** en la primera ingesta no se había comprobado si Alerta Ruta conservaba la programación del Excel. Ahora se confirma la fidelidad de esta exportación y la ausencia de las hojas complementarias en el JSON. No se encontraron nuevos hechos operativos ni correcciones a horarios. El KPI, prioridades y limitaciones permanecen iguales. Es una dependencia técnica confirmada, no una segunda fuente independiente de EMACRUZ.
++
++**Pendiente adicional de mantenimiento:** el JSON no embebe fecha de exportación ni hash del Excel; se propone añadirlos en una tarea futura del repositorio original, con autorización. La wiki no modifica ese exportador.
+--- antes/wiki/index.md
++++ despues/wiki/index.md
+@@ -1,19 +1,32 @@
+ # EMACRUZ — índice de conocimiento
+ 
+-Estado: primera ingesta, versión 1.0. Fuentes conservadas y cálculos reales; conclusiones propuestas pendientes de revisión humana. La consulta, auditoría y segunda ingesta se ejecutarán después de congelar este estado.
++Estado: dos ingestas ejecutadas. KPI documental v1.0, 6/21 = 28,57 %. La segunda ingesta confirmó fidelidad del JSON sin cambiar el diagnóstico. Conclusiones y reglas pendientes de revisión humana. Fuentes fijadas por hashes/commit; no se acredita vigencia operativa.
+ 
+-- [objetivos ](objetivos.md)
+-- [fuentes ](fuentes.md)
+-- [diccionario datos ](diccionario_datos.md)
+-- [indicadores ](indicadores.md)
+-- [hallazgos ](hallazgos.md)
+-- [log ](log.md)
++## Páginas de la wiki
+ 
+-- [Reglas del agente](../AGENTS.md)
+-- [Procedencia](../fuentes/procedencia.md)
++- [Objetivos, usuarios y utilidad](objetivos.md)
++- [Fuentes y versiones](fuentes.md)
++- [Diccionario de datos](diccionario_datos.md)
++- [Indicadores y reglas del KPI](indicadores.md)
++- [Hallazgos por registro](hallazgos.md)
++- [Consulta de negocio revisada](consulta_negocio.md)
++- [Comparación de exportación Excel/JSON](comparacion_exportacion.md)
++- [Revisión de calidad](revision_calidad.md)
++- [Cinco respuestas preparatorias del paso 6](respuestas_paso_6.md)
++- [Registro cronológico real](log.md)
++
++## Método y evidencias
++
++- [Reglas del agente](../AGENTS.md) y [README de ejecución](../README.md)
++- [Procedencia](../fuentes/procedencia.md) y [manifiesto de integridad](../fuentes/manifiesto.json)
+ - [Prompt docente](../prompts/prompt_inicial.md), [mejorado](../prompts/prompt_mejorado.md) y [justificación](../prompts/justificacion_mejoras.md)
+ - [Decisiones metodológicas](../docs/decisiones_metodologicas.md)
+-- [Mapa de trazabilidad](../docs/mapa_trazabilidad.md)
+-- [Revisión humana](../docs/revision_humana.md)
+-- [Cálculo de primera ingesta](../evidencias/primera_ingesta/calculo_v1/analisis.json)
+-- [Inicio y reproducción](../README.md)
++- [Mapa objetivo → fuente → indicador → página → decisión](../docs/mapa_trazabilidad.md)
++- [Revisión humana y asuntos pendientes](../docs/revision_humana.md)
++- [Comparación real antes/después](../docs/comparacion_ingestas.md)
++- [Matriz de los ocho criterios](../docs/matriz_cumplimiento.md)
++- [Primera ingesta](../evidencias/primera_ingesta/resumen.md)
++- [Consulta y verificaciones](../evidencias/consulta_y_verificaciones/resumen.md)
++- [Segunda ingesta](../evidencias/segunda_ingesta/resumen.md)
++
++El informe académico separado y la publicación se realizarán en tareas posteriores. Los archivos de conocimiento actuales son material de trabajo verificable, sin aprobación operativa atribuida a EMACRUZ.
+--- antes/wiki/indicadores.md
++++ despues/wiki/indicadores.md
+@@ -23,3 +23,7 @@
+ **Límites:** el KPI solo exige programación semanal ordinaria, no distrito ni feriados porque mide sector **o** zona. Feriados no informados se publican como limitación independiente. Un registro que cumple no se convierte en vigente, geográficamente inequívoco, autorizado u operacionalmente validado. La relación distrito → frecuencia, la vigencia y los posibles solapamientos requieren evidencia adicional. No se mide cobertura real, puntualidad, toneladas, acumulación ni recogidas ejecutadas.
+ 
+ [Detalle por fila](../evidencias/primera_ingesta/calculo_v1/registros_evaluados.csv) · [Hallazgos](hallazgos.md) · [Índice](index.md)
++
++## Confirmación en segunda ingesta
++
++Regla permanece en versión 1.0. El [recálculo del Excel](../evidencias/segunda_ingesta/calculo/analisis.json) vuelve a obtener 6/21 = 28,57 %. La [equivalencia con el JSON](../evidencias/segunda_ingesta/comparacion/comparacion.json) confirma conservación de las 18 variables utilizadas, incluidas notas nocturnas y faltantes. No cambia población ni numerador y no se suma el JSON como otras 21 observaciones independientes. Esta confirmación técnica no aporta vigencia ni aprobación humana.
+--- antes/wiki/log.md
++++ despues/wiki/log.md
+@@ -15,3 +15,35 @@
+ ## 2026-11-03T21:10:52-04:00 — Primera ingesta ejecutada
+ 
+ Entradas: Excel, README y documentación de objetivos. Se generaron índice, objetivos, fuentes, diccionario, indicadores, hallazgos, procedencia, método, mapa, registro humano y README. [Inventario de archivos y aportes](../evidencias/primera_ingesta/operacion.json). KPI v1.0 = 6/21 (28,57 %); faltan horas Fin en quince filas. El JSON aún no se leyó. Las conclusiones están pendientes de revisión humana.
++
++## 2026-11-03T21:10:52-04:00 — Instantánea primera_ingesta
++
++Se conservó el estado real de 34 archivos en [primera_ingesta](../evidencias/primera_ingesta/estado.json), con ZIP y hashes. El propio asiento se añade después de la captura para evitar autorreferencia.
++
++## 2026-11-03T21:12:23-04:00 — Consulta inicial desde la wiki
++
++Se leyó primero índice y después objetivos, fuentes, indicadores, hallazgos y diccionario. [Orden y hashes](../evidencias/consulta_y_verificaciones/lectura_y_afirmaciones.json). Se guardó [respuesta inicial](../evidencias/consulta_y_verificaciones/respuesta_inicial.md) con tres afirmaciones derivadas del cálculo real: 21 filas, 15 sin Fin y 6 que cumplen. Todavía no se marca ninguna como contrastada por lectura independiente.
++
++## 2026-11-03T21:13:03-04:00 — Consulta revisada y contrastada
++
++V1, V2 y V3 confirmadas por lectura XML independiente. Se guardó wiki/consulta_negocio.md y se enlazó desde índice. Cifras iniciales conservadas; se precisó acción por grupo, alcance semanal y revisión humana pendiente. Auditoría de enlaces iniciada después de la consulta.
++
++## 2026-11-03T21:14:22-04:00 — Auditoría y corrección antes de segunda ingesta
++
++Se registró revisión semántica en wiki/revision_calidad.md y se incorporó al índice. Auditoría inicial: cuatro enlaces rotos. Se corrigió documento/generador y se repitió: evidencias/revision/enlaces_corregidos.json, 168 enlaces locales, cero rotos, cero páginas wiki aisladas y cero duplicados exactos. También se aclaró una errata del prompt sobre duplicados sin cambiar reglas. Pendientes: vigencia, mapas, imágenes, permisos y aceptación humana. Un parche de enlaces con fecha de ejecución mal transcrita fue rechazado sin modificar archivos y se reaplicó leyendo la fecha real.
++
++## 2026-11-03T21:14:23-04:00 — Instantánea segunda_ingesta/antes
++
++Se conservó el estado real de 39 archivos en [segunda_ingesta/antes](../evidencias/segunda_ingesta/antes/estado.json), con ZIP y hashes. El propio asiento se añade después de la captura para evitar autorreferencia.
++
++## 2026-11-03T21:15:30-04:00 — Segunda ingesta: incorporación auténtica de evidencia
++
++Después del estado previo, consulta y auditoría, se incorporaron JSON y exportador originales del commit fijado, comprobando blobs. [Incorporación](../evidencias/segunda_ingesta/incorporacion.json). Estas evidencias no existían en la primera instantánea y no se usaron en su cálculo. Se compararán las 18 variables de Frecuencias y fila_origen, sin alterar el proyecto original.
++
++## 2026-11-03T21:17:46-04:00 — Segunda ingesta: comparación y actualización de conocimiento
++
++Comparación ejecutada: 399 valores, 0 diferencias; proyección idéntica en bytes. Recálculo del Excel: 6/21 (28,57 %). Se actualizaron fuentes, procedencia, diccionario, indicadores, hallazgos, consulta, revisión, mapa e índice; se creó comparación de exportación y respuestas del paso 6. [Archivos y aportes](../evidencias/segunda_ingesta/actualizacion.json). El diagnóstico se mantiene; se añade fidelidad técnica del derivado y omisión de las otras hojas. No hay contradicciones nuevas ni aprobación humana.
++
++## 2026-11-03T21:21:34-04:00 — Preparación del cierre y matriz docente
++
++Se documentaron ocho criterios con evidencias, sin puntuación autoasignada: siete cumplidos técnicamente y criterio de ingesta parcial por aceptación humana pendiente. Se prepararon scripts de reproducción, integridad y comparación entre estados, README completo y documentación de antes/después. Se aclaró que el conector GitHub devuelve texto en fetch; una tentativa de parsearlo como metadatos JSON falló y se usó fetch_file base64 con comprobación de blob para conservar bytes. No se crearon Git, Word, PDF ni publicación.
+--- antes/docs/comparacion_ingestas.md
++++ despues/docs/comparacion_ingestas.md
+@@ -0,0 +1,22 @@
++# Comparación antes/después de las ingestas
++
++Versiones reales, conservadas sin Git: [primera ingesta](../evidencias/primera_ingesta/estado.json), [antes de segunda](../evidencias/segunda_ingesta/antes/estado.json) y [después de segunda](../evidencias/segunda_ingesta/despues/estado.json). Cada estado es un ZIP de archivos existentes, con fecha real y hashes. El primer ZIP se produjo antes de la consulta, auditoría y lectura del JSON. El estado anterior a la segunda incluye consulta y auditoría ya ejecutadas; permite separar sus cambios de los debidos al JSON.
++
++| Aspecto | Primera ingesta / antes de incorporar JSON | Después de segunda ingesta | Interpretación |
++| --- | --- | --- | --- |
++| Evidencias analíticas | Excel y README/documentación existentes | Se añaden JSON y exportador fijados al mismo commit | Nueva evidencia técnica, no fuente independiente de negocio |
++| Registros y KPI | 21 filas, 6 cumplen, 28,57 % | 21 filas, 6 cumplen, 28,57 % | Se confirma, no se inventa un cambio numérico |
++| Fidelidad del JSON | No comprobada, contenido no incorporado | 399 valores contrastados, 0 diferencias y bytes idénticos | Se resuelve incertidumbre sobre exportación de esta versión |
++| Faltantes y medianoche | 15 sin Fin, 9 sin Inicio; 4 cruces documentados | Conservados en JSON | No se corrigen horarios en los originales |
++| Contexto de otras hojas | Distritos/Servicios/Fuentes documentados | Se confirma que JSON no exporta esas hojas | La wiki preserva contexto fuera del derivado |
++| Procedencia interna del JSON | Desconocida antes de leerlo | Sin hash Excel ni fecha de exportación embebidos | Commit y comparación dan trazabilidad externa; mejora futura propuesta |
++| Páginas de la wiki | Objetivos, fuentes, diccionario, KPI, hallazgos y log; luego consulta/revisión | Se actualizan fuentes, diccionario, KPI, hallazgos, consulta, revisión, índice y log; se añaden comparación y respuestas del paso 6 | Documentación cambia aunque cifras no cambien |
++| Conclusiones operativas | No acreditadas | Siguen no acreditadas | Faltan vigencia, permisos, imágenes/mapas y revisión humana |
++
++Resultados reales de las comparaciones de archivos: [primera → segunda](../evidencias/segunda_ingesta/diferencias_desde_primera/cambios.json) y [antes → después de segunda](../evidencias/segunda_ingesta/diferencias_desde_antes/cambios.json). Cada salida lista creados, modificados, retirados y enlaces agregados/retirados por página. Los parches exactos son [primera → segunda](../evidencias/segunda_ingesta/diferencias_desde_primera/paginas.diff) y [antes → después](../evidencias/segunda_ingesta/diferencias_desde_antes/paginas.diff). Se generaron con [comparar_estados.py](../scripts/comparar_estados.py) sobre archivos de los ZIP, sin reconstruir estados desde la versión final.
++
++Evidencia de datos: [comparación Excel/JSON](../evidencias/segunda_ingesta/comparacion/comparacion.json) y [operación de actualización](../evidencias/segunda_ingesta/actualizacion.json). No hubo contradicciones nuevas entre valores; las diferencias de representación (nombres de campo, 0/1 frente a booleanos, coordenada añadida) se resuelven con el mapa explícito. Los posibles solapamientos heredados quedan pendientes, conservando ambas referencias.
++
++El estado después contiene también documentos preparatorios y scripts de cierre añadidos durante esta etapa; la lista de archivos permite distinguirlos de las páginas analíticas. Los resultados de validación y diff se guardan fuera de los ZIP y se producen después de congelarlos para evitar hashes autorreferentes. El log final añade esos eventos sin alterar el log histórico del ZIP.
++
++[Página de exportación](../wiki/comparacion_exportacion.md) · [Revisión](../wiki/revision_calidad.md) · [Índice](../wiki/index.md)
+--- antes/docs/matriz_cumplimiento.md
++++ despues/docs/matriz_cumplimiento.md
+@@ -0,0 +1,20 @@
++# Matriz de cumplimiento de la rúbrica docente
++
++Referencia: [HTML docente, sección 5](../fuentes/consigna/Tarea_wiki_IA_proyecto_BI.html), fecha declarada 2026-11-03. Los puntos son los pesos de la rúbrica, no calificaciones obtenidas. No se asigna un total ni se simula evaluación docente. Estado de implementación local, contrastable mediante enlaces; la aceptación humana se registra aparte.
++
++| Criterio | Peso | Estado | Evidencia concreta y límite |
++| --- | --- | --- | --- |
++| 1. Alineación con proyecto BI | 15 | Cumplido en implementación | [Objetivos existentes, usuarios, decisiones y resultados](../wiki/objetivos.md), [mapa objetivo → fuente → KPI → página → decisión](mapa_trazabilidad.md), pregunta respondida sin inventar cobertura o predicción |
++| 2. Arquitectura y reglas de wiki | 15 | Cumplido en implementación | [AGENTS](../AGENTS.md), [fuentes con integridad](../fuentes/manifiesto.json), [índice enlazado](../wiki/index.md), [log](../wiki/log.md), auditoría de enlaces y control de privacidad/versiones |
++| 3. Prompt adaptado y justificado | 10 | Cumplido en implementación | [Original íntegro, campos genéricos conservados](../prompts/prompt_inicial.md), [mejorado específico](../prompts/prompt_mejorado.md), [justificación](../prompts/justificacion_mejoras.md); comprobación automática contra el bloque HTML |
++| 4. Ingesta y trazabilidad | 15 | Parcial: ejecución completa, aceptación humana pendiente | [Dos evidencias iniciales y estado real](../evidencias/primera_ingesta/resumen.md), [evidencia nueva y segundo estado](../evidencias/segunda_ingesta/resumen.md), hashes, [cambios](comparacion_ingestas.md). El HTML exige revisar modificaciones antes de aceptarlas: revisión IA realizada, aceptación por persona no recibida |
++| 5. Calidad semántica y analítica | 10 | Cumplido en implementación | [KPI completo](../wiki/indicadores.md), [diccionario](../wiki/diccionario_datos.md), [hallazgos](../wiki/hallazgos.md), cálculo reproducible 6/21 y separación de hechos/inferencias. Pertinencia de reglas propuesta, pendiente de persona |
++| 6. Consulta y verificación | 15 | Cumplido técnicamente | [Respuesta inicial y lectura del índice](../evidencias/consulta_y_verificaciones/lectura_y_afirmaciones.json), [tres verificaciones independientes](../evidencias/consulta_y_verificaciones/contraste/verificaciones.json), [respuesta revisada](../wiki/consulta_negocio.md). Tres confirmadas; no se introdujeron errores artificiales |
++| 7. Revisión e iteración | 10 | Cumplido en implementación | [Auditoría semántica y correcciones](../wiki/revision_calidad.md), [fallo de enlaces real](../evidencias/revision/enlaces_antes.json), [repetición corregida](../evidencias/revision/enlaces_corregidos.json), [estados antes/después](comparacion_ingestas.md), comparación Excel/JSON sin diferencias |
++| 8. Próximos pasos y reproducibilidad | 10 | Cumplido en implementación | [Cinco respuestas y tres pasos con responsables propuestos/insumos/productos/criterios](../wiki/respuestas_paso_6.md), [README con comandos](../README.md), [validación integral](../evidencias/revision/validacion_final/resultado.json) y scripts sin dependencias |
++
++**Pendientes deliberados:** elaborar y entregar el informe académico separado, publicar/inicializar Git en otra tarea y recibir las aprobaciones humanas que no han ocurrido. La falta de vigencia, imágenes, mapas o permiso institucional es una limitación real diagnosticada; no impide documentarla y reproducir el diagnóstico, pero sí limita uso operativo. No hay fuente imprescindible del cálculo sustituida por datos fabricados.
++
++La autoevaluación de cumplimiento técnico no es aceptación de reglas o conclusiones de negocio. [Registro de revisión humana](revision_humana.md). Antes de entregar el informe, incorporar revisión personal y comprobar el texto del informe contra estas evidencias.
++
++[Índice](../wiki/index.md)
+--- antes/wiki/comparacion_exportacion.md
++++ despues/wiki/comparacion_exportacion.md
+@@ -0,0 +1,23 @@
++# Comparación de Excel y representación JSON
++
++Versión 1.0, segunda ingesta real. Evidencias: [Excel](../fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx), [JSON](../fuentes/referencia_remota/web/data/frecuencias.json) y [exportador](../fuentes/referencia_remota/scripts/export_web_data.py), commit 5fba63ec96844fa1373b6c5703fce54430b52de8. [Procedencia](../fuentes/procedencia.md).
++
++Ejecución: 2026-11-03T21:15:30-04:00. [Comparador Python](../scripts/comparar_excel_json.py) lee el Excel, obtiene mapas del exportador con AST, proyecta registros y contrasta por ID. No ejecuta el exportador ni escribe en la copia fuente. [Resultado completo](../evidencias/segunda_ingesta/comparacion/comparacion.json), [proyección reproducida](../evidencias/segunda_ingesta/comparacion/proyeccion_reproducida.json).
++
++| Control | Resultado observado |
++| --- | --- |
++| Registros Excel / JSON / total declarado | 21 / 21 / 21 |
++| IDs y orden | Mismos IDs F01–F21 y mismo orden; 0 IDs extra o duplicados JSON |
++| Variables originales | 18, ninguna columna de Frecuencias omitida |
++| Comparaciones | 378 valores de origen + 21 coordenadas fila_origen = 399 |
++| Diferencias | 0 |
++| Tipos de días | 147 banderas enteras 0/1 comparadas con booleanos JSON de tipo real bool |
++| Bytes de la proyección | Idénticos al JSON preservado, SHA-256 `b4c5f3d2bccffc5e7b530ff27a9fa00c175167ff039b95305815a3d0a7ce298c` |
++| Hojas que no exporta | Distritos, Servicios y Fuentes |
++| KPI | Recálculo 6/21 = 28,57 %, sin sumar ambas representaciones |
++
++**Relación:** el JSON es una transformación del Excel, no una fuente independiente de horarios. Conserva “No indicado”, la zona faltante de F21 y las notas de cruce de F07–F10. El exportador recorta espacios y representa nulos textuales como No indicado. En esta versión los días están completos en 0/1; el código admite convertir un día nulo a false, riesgo potencial que debe revisarse si cambian datos. No se observó tal caso aquí.
++
++**Conclusión técnica:** se resolvió la incertidumbre sobre fidelidad de esta exportación. No se detectaron contradicciones que requieran escoger una fuente sobre otra. Siguen pendientes transcripción contra imágenes, vigencia, permisos, polígonos y revisión humana. El JSON no embebe fecha de exportación, versión del libro ni su hash. El commit y esta comparación aportan trazabilidad externa para esta wiki.
++
++[Diccionario](diccionario_datos.md) · [Antes/después](../docs/comparacion_ingestas.md) · [Índice](index.md)
+--- antes/wiki/consulta_negocio.md
++++ despues/wiki/consulta_negocio.md
+@@ -0,0 +1,31 @@
++# Consulta de negocio revisada técnicamente
++
++Versión 1.0, tras primera ingesta y tres contrastes. **Pendiente de aprobación humana.** Pregunta: “¿Qué tan completa y consistente es la información disponible sobre días y horarios de recolección por sector o zona, y qué registros requieren revisión antes de utilizarse en Alerta Ruta?”
++
++**Respuesta:** la información semanal es consistente en sus días, pero incompleta en horas. El Excel contiene **21 registros evaluables** (Frecuencias, filas 2–22). **6/21 = 28,57 %** cumplen el KPI documental v1.0: F07–F12, filas 8–13. Los otros **15/21 = 71,43 %** carecen de Fin y nueve también de Inicio. Son registros de programación, no distritos únicos, rutas físicas ni recojos ejecutados. [Tres verificaciones independientes](../evidencias/consulta_y_verificaciones/contraste/verificaciones.json), [Excel original preservado](../fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx), [reglas del KPI](indicadores.md).
++
++Los **21 patrones semanales** concuerdan con Lun–Dom. F07–F10 (filas 8–11) contienen 20:00 → 04:00 y una nota explícita de madrugada siguiente; esas cuatro franjas son coherentes como cruce de día, de ocho horas. No se invierte ni completa ningún valor original. [Lectura independiente y controles adicionales](../evidencias/consulta_y_verificaciones/contraste/verificaciones.json), [hallazgos](hallazgos.md).
++
++| Registros a revisar | Evidencia observada | Propuesta de acción, pendiente de persona |
++| --- | --- | --- |
++| F13–F21, filas 14–22 | Inicio y Fin No indicado | Recuperar ambas horas y confirmar vigencia antes de usar como programación exacta |
++| F01–F06, filas 2–7 | Fin y sector No indicado | Obtener fin/sector sin deducir A/B por semejanza |
++| F21, fila 22 | Zona No indicada en fila, distrito DM 15 | Aclarar zona/delimitación, sin asignar Norte/Sur |
++| F17/F20, filas 18/21, con F16/F19 | Notas de posible solapamiento, no polígonos disponibles | Revisar mapas; no borrar como duplicados ni declarar contradicción demostrada |
++| Todos, incluidos F07–F12 | Vigencia no acreditada y relación imagen → fila incompleta | Confirmar aviso original, período y autorización antes de decisión operativa |
++
++Localización de cada fila y motivo: [detalle calculado](../evidencias/primera_ingesta/calculo_v1/registros_evaluados.csv); fuente primaria: [Excel](../fuentes/originales/data/Base_Emacruz_sectores_y_frecuencias.xlsx), hoja Frecuencias y criterios Fuentes!A12:B16. La prioridad anterior es una inferencia de mantenimiento documental, sujeta a [revisión humana](../docs/revision_humana.md).
++
++Por sector publicado: A tiene 6/6 filas que cumplen; B, 0/9; sin sector, 0/6. Son proporciones del archivo, no cobertura ni desempeño de EMACRUZ. Hay 12 registros sin distritos y 20 sin información de feriados, controles complementarios que no forman parte del KPI semanal por sector **o** zona. [Cálculo y desgloses](../evidencias/primera_ingesta/calculo_v1/analisis.json), [definición y límites](indicadores.md).
++
++**Vacíos e incertidumbres:** las siete imágenes descritas en Fuentes!A2:E8 tienen vigencia No indicada y sus originales no están incorporados. La fecha interna del libro (2026-10-15T16:29:10Z) no acredita vigencia. No puede verificarse precisión cartográfica ni transcripción visual. Tampoco se puede responder sobre cumplimiento operativo, cobertura municipal, acumulación o predicción con estos datos. [Procedencia](../fuentes/procedencia.md), [fuentes](fuentes.md), [plan CRISP-DM existente](../fuentes/referencia_remota/docs/plan-crisp-dm.md).
++
++**Resultado del contraste:** V1 (21 filas), V2 (15 sin Fin) y V3 (6 que cumplen, IDs y denominador) quedaron confirmadas mediante lectura directa XML independiente del analizador. No hubo correcciones numéricas que aplicar a la [respuesta inicial](../evidencias/consulta_y_verificaciones/respuesta_inicial.md). Se precisa aquí la separación entre prioridad documental y uso operativo, junto con tabla de acciones y alcance de los feriados. No se ha recibido aceptación humana ni se autoriza la incorporación operativa de estos horarios.
++
++[Verificaciones](../evidencias/consulta_y_verificaciones/contraste/verificaciones.md) · [Índice](index.md)
++
++## Actualización 2.0 tras la segunda ingesta
++
++El diagnóstico numérico permanece igual. Se confirma que la representación JSON de Alerta Ruta conserva los mismos 21 registros y los faltantes: 0 diferencias en 399 valores, incluidos fila_origen y días booleanos. [Comparación](../evidencias/segunda_ingesta/comparacion/comparacion.json), [exportador fuente](../fuentes/referencia_remota/scripts/export_web_data.py).
++
++Esta nueva evidencia permite afirmar fidelidad de exportación para la versión fijada; no permite afirmar vigencia o validez institucional. Las tres verificaciones originales siguen confirmadas. La decisión de usar o corregir registros continúa pendiente de persona. [Antes/después](../docs/comparacion_ingestas.md).
+--- antes/wiki/respuestas_paso_6.md
++++ despues/wiki/respuestas_paso_6.md
+@@ -0,0 +1,44 @@
++# Respuestas preparatorias del paso 6
++
++Versión 1.0, después de dos ingestas. Material para redactar posteriormente el informe académico separado; no constituye ese informe. Fuente docente: [sección 2.6 del HTML](../fuentes/consigna/Tarea_wiki_IA_proyecto_BI.html). Conclusiones propuestas pendientes de [revisión humana](../docs/revision_humana.md).
++
++## 1. ¿Qué decisión BI puede apoyarse ahora y cuál no?
++
++Se puede priorizar revisión documental de F01–F06 y F13–F21: quince filas carecen de Fin, y nueve de Inicio. La wiki ofrece localización por ID/fila, KPI 6/21 y evidencias comprobadas. También se puede comprobar que esta exportación no introduce diferencias frente al Excel. [Consulta revisada](consulta_negocio.md), [verificaciones](../evidencias/consulta_y_verificaciones/contraste/verificaciones.json), [comparación](../evidencias/segunda_ingesta/comparacion/comparacion.json).
++
++No hay evidencia suficiente para decidir horarios vigentes para ciudadanos, cobertura real, cumplimiento del servicio, acumulación bajo escasez de diésel o predicción. Faltan confirmación institucional, imágenes/polígonos y observaciones operativas. Los objetivos de investigación del [plan existente](../fuentes/referencia_remota/docs/plan-crisp-dm.md) se conservan con ese límite.
++
++## 2. ¿Qué cambió entre ingestas o qué se confirmó?
++
++La primera ingesta conocía el Excel y objetivos, pero no había comprobado la representación del prototipo. La segunda incorporó JSON y exportador fijados por commit. Se confirmó 21/21 registros, 18 variables originales, 399 valores comparados con fila_origen y cero diferencias, incluso bytes idénticos al reproducir la proyección. El KPI permanece 28,57 % y las prioridades no cambian. La nueva conclusión es fidelidad técnica del derivado; no son nuevos horarios ni corroboración independiente. Se documentó que el JSON omite las hojas complementarias y no embebe vigencia/hash del Excel. [Comparación](comparacion_exportacion.md), [estados y diferencias](../docs/comparacion_ingestas.md).
++
++## 3. ¿Qué falta para alcanzar cada resultado esperado?
++
++| Resultado esperado de la wiki | Evidencia producida | Fuente, cálculo o validación que falta |
++| --- | --- | --- |
++| Inventario centralizado y trazable | [Manifiesto](../fuentes/manifiesto.json), copias y commits | Interlocutor, permiso institucional/licencia y período operativo; no faltan hashes técnicos de los archivos incorporados |
++| Calidad de programación cuantificada | [KPI y filtros](indicadores.md), CSV y tres contrastes | Aprobación humana de reglas y recuperación autorizada de horas para mejorar calidad; el cálculo ya se ejecutó |
++| Problemáticas localizadas | [Hallazgos](hallazgos.md) por fila | Imágenes originales, mapas/polígonos para solapamientos, zona F21, sector general, feriados y vínculo distrito → frecuencia |
++| Herramientas y resultados reproducibles | Scripts, resultados y comparación Excel/JSON | Revisión del código y ejecución por una persona externa para aceptación independiente; no simular esa ejecución |
++| Información útil para propuestas de mejora | [Consulta](consulta_negocio.md) y prioridades | Responsable asignado, revisión temática y medición posterior de utilidad con mantenedores/usuarios |
++| Investigación de acumulación / comunicación de estados del proyecto original | [Objetivos y límites](objetivos.md) | Series de recolección ejecutada, acumulación medida, restricciones de diésel, estados aprobados y evaluación contra línea base. No calculables desde frecuencias solas |
++
++## 4. Tres siguientes pasos en orden de prioridad
++
++Roles propuestos; ninguna asignación real está confirmada. No se fija una fecha de cierre inventada.
++
++| Prioridad | Responsable propuesto | Insumo necesario | Producto verificable | Criterio de finalización |
++| --- | --- | --- | --- | --- |
++| 1. Revisar y autorizar evidencia y reglas | Responsable académico/analista BI con interlocutor autorizado de EMACRUZ; asignación pendiente | KPI v1.0, originales, avisos, permisos y consulta | Acta o registro de revisión con alcance/versión/decisión y permisos conocidos | Persona identificada revisa reglas, quince incidencias horarias y vigencia; acepta o rechaza explícitamente cada conclusión y documenta qué sigue no acreditado |
++| 2. Completar o aclarar programación y territorio | Mantenedor de datos y responsable cartográfico; asignación pendiente | Horarios autorizados, mapas, sector de avisos generales, zona F21, catálogo distrito/frecuencia, feriados | Nueva versión derivada con trazabilidad por celda e incidencias resueltas o justificadas | Cada incidencia tiene fuente y estado; se recalcula KPI y se contrastan las modificaciones sin cambiar originales, sin exigir artificialmente 100 % |
++| 3. Instituir actualización y validación de utilidad | Mantenedor de wiki y revisor académico; asignación pendiente | Nuevas versiones autorizadas, scripts, observaciones de usuarios/mantenedores | Nueva ingesta registrada, exportación comparada, respuesta revisada y registro de utilidad | Cambios de versión generan hashes/estado anterior, comparaciones y auditoría sin enlaces rotos; persona acepta conclusiones y registra utilidad observada. Publicación e informe se tramitan en sus tareas posteriores |
++
++## 5. ¿Cómo se mantendrá actualizada?
++
++Ante un cambio de datos: conservar nueva copia autorizada con fecha de consulta, versión y hash, mantener la anterior y registrar diferencia por ID/campo. Ejecutar `analizar.py`, `verificar_afirmaciones.py`, `comparar_excel_json.py` y la validación integral en carpeta nueva. Actualizar fuentes, diccionario si cambia esquema, indicadores, hallazgos, consulta e índice; añadir operación al log y conservar instantánea real. Un cambio del esquema detiene la lectura hasta ajustar el código explícitamente.
++
++Ante un cambio de definición: nueva versión de regla con justificación, aprobación humana y recálculo comparativo, sin reetiquetar el resultado histórico como si usara la nueva regla. Ante nueva evidencia contradictoria: conservar ambas referencias, explicar alcance y dejar decisión pendiente hasta resolverla. El JSON nunca se contará como fuente independiente. La frecuencia de revisión se propone por evento de cambio y antes de cada uso operativo; no se inventa un calendario institucional.
++
++Las nuevas afirmaciones de una consulta se capturan antes de su verificación. El verificador actual contrasta las tres afirmaciones históricas de esta ejecución: una versión nueva requiere registrar nuevas afirmaciones y conservar las antiguas. [AGENTS](../AGENTS.md), [método](../docs/decisiones_metodologicas.md), [log](log.md), [reproducción](../README.md).
++
++[Índice](index.md)
+--- antes/wiki/revision_calidad.md
++++ despues/wiki/revision_calidad.md
+@@ -0,0 +1,26 @@
++# Revisión de calidad de la wiki
++
++Versión 1.0. Auditoría IA posterior a la consulta y anterior a incorporar el JSON. Aprobación humana pendiente. [Auditor de enlaces](../scripts/auditar_enlaces.py), [resultado inicial ejecutado](../evidencias/revision/enlaces_antes.json). Este control cubre Markdown propio; las copias originales se preservan sin corregir sus referencias externas.
++
++| ID y aspecto auditado | Observación real | Corrección o justificación |
++| --- | --- | --- |
++| A01 Enlaces rotos | Cuatro destinos incorrectos en el documento de verificaciones: un nivel de carpeta omitido | Se corrigieron enlaces y el generador calcula rutas relativas según la carpeta elegida. Se repite auditoría después del arreglo. |
++| A02 Páginas aisladas | Ninguna de las páginas existentes de la wiki quedó fuera del recorrido desde índice | Mantener enlaces al añadir consulta, revisión y segunda ingesta. |
++| A03 Duplicación | Cero archivos Markdown propios idénticos; cifras resumidas en varias páginas enlazan la definición canónica | No eliminar resúmenes útiles. Los avisos generales y sectorizados permanecen separados según Fuentes!A14:B14. |
++| A04 Perfil de ausencias | La ejecución analítica inicial clasificó ceros binarios como ausentes | Corregido antes de congelar ingesta 1. [Primer resultado histórico](../evidencias/primera_ingesta/calculo/analisis.json) conserva el fallo; [resultado corregido](../evidencias/primera_ingesta/calculo_v1/analisis.json) es la referencia vigente. KPI 6/21 permanece igual. |
++| A05 Contradicciones de horarios | Fin menor que Inicio en cuatro filas con nota explícita de madrugada siguiente | Se documentó cruce en lugar de alterar valores. Los posibles solapamientos F17/F20 siguen pendientes de mapas, sin tratarse como duplicados probados. |
++| A06 Afirmaciones sin respaldo | Las cifras de consulta tienen tres contrastes independientes; inferencias/prioridades están etiquetadas | Vigencia, transcripción visual, permisos y utilidad operativa siguen sin evidencia suficiente y se expresan como pendientes. |
++| A07 Indicador ambiguo | “Programación completa” podría interpretarse como incluir feriados o identificación por distrito | La definición especifica programación semanal ordinaria por sector o zona, controles auxiliares separados y aprobación humana pendiente. No se mide cobertura municipal. |
++| A08 Vigencia/versiones | README local antiguo frente a documentación remota más reciente. Excel coincide por blob Git; ninguna fecha demuestra vigencia | Se conservan ambas versiones fijadas, fechas de consulta y huellas. No se “actualiza” un horario sin fuente nueva autorizada. |
++| A09 Consistencia semántica de fuentes | Fuentes contiene 13 filas no vacías, de las que solo siete son imágenes y seis son criterios | Wiki y diccionario distinguen ambas categorías. No se afirma que existan trece avisos. |
++| A10 Fechas y aceptación | Fechas reales en manifiestos/ejecuciones, metadato del Excel y fecha docente diferenciados | No se fabrican fechas de revisión; registro humano permanece pendiente. |
++
++Referencias: [Excel y hojas](fuentes.md), [KPI](indicadores.md), [verificaciones](../evidencias/consulta_y_verificaciones/contraste/verificaciones.json), [decisiones](../docs/decisiones_metodologicas.md). La inspección semántica fue realizada por IA y no es una aprobación humana. El HTML pide revisión antes de aceptar cambios; queda expresamente pendiente esa aceptación.
++
++[Índice](index.md)
++
++## Iteración después de incorporar JSON
++
++Se confirmó mapeo íntegro de Frecuencias, 0 diferencias en la comparación, y se precisó que el JSON no exporta las otras tres hojas ni embebe vigencia/hash del libro. La potencial conversión de días nulos a false pertenece al comportamiento del exportador; no se observó en la base binaria actual. No se atribuye esa posibilidad a filas reales.
++
++El resultado corregido de la auditoría previa fue [0 enlaces rotos en 168 enlaces locales](../evidencias/revision/enlaces_corregidos.json). Los archivos modificados y las diferencias se conservarán junto al estado posterior. Las revisiones finales amplían el control a nuevos documentos y a hashes, estructura, secuencia y reproducción. [Comparación de datos](../evidencias/segunda_ingesta/comparacion/comparacion.json) · [Registro de decisiones](../docs/decisiones_metodologicas.md).
