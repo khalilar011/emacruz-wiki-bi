@@ -1,10 +1,10 @@
 # Agente de la wiki EMACRUZ
 
-Versión 1.1. Instrucciones para esta carpeta independiente. El AGENTS del proyecto original se conserva solo como evidencia, no gobierna esta wiki. La solicitud expresa del usuario del 05/11/2026 autoriza preparar Git y publicar esta entrega en un repositorio independiente privado; sustituye la restricción de la etapa local anterior. No acredita permiso institucional ni autoriza visibilidad pública.
+Versión 1.2. Instrucciones para esta carpeta independiente. El AGENTS del proyecto original se conserva solo como evidencia, no gobierna esta wiki. La solicitud inicial del 05/11/2026 autorizó preparar Git y publicar una entrega independiente privada. Posteriormente el usuario confirmó que el repositorio ya está publicado y es público, y solicitó actualizar su documentación en `main`. Ese estado no acredita permiso institucional, licencia ni aprobación de reglas o conclusiones. No cambiar la visibilidad ni los accesos como parte de esta actualización documental.
 
 ## Objetivo y alcance
 
-Mantener conocimiento BI verificable sobre calidad de la programación publicada de recolección para Alerta Ruta. Reutilizar los objetivos de [README original](fuentes/originales/README.md) y los límites del [plan CRISP-DM](fuentes/referencia_remota/docs/plan-crisp-dm.md). No desarrollar un nuevo portal, pronosticar sin observaciones ni presentar el prototipo como herramienta oficial. La publicación privada autorizada se rige por [el registro de preparación](docs/publicacion_github.md). No desplegar ni redactar informe académico en esta etapa.
+Mantener conocimiento BI verificable sobre calidad de la programación publicada de recolección para Alerta Ruta. Reutilizar los objetivos de [README original](fuentes/originales/README.md) y los límites del [plan CRISP-DM](fuentes/referencia_remota/docs/plan-crisp-dm.md). No desarrollar un nuevo portal, pronosticar sin observaciones ni presentar el prototipo como herramienta oficial. El estado del repositorio público se documenta en [el registro de publicación](docs/publicacion_github.md). Esta tarea solo actualiza documentación; no modifica bases, análisis, indicadores ni evidencias académicas. No desplegar ni redactar informe académico en esta etapa.
 
 ## Estructura y fuentes autorizadas
 

@@ -4,7 +4,7 @@ Versión 1.0. Base normativa: [HTML docente](../fuentes/consigna/Tarea_wiki_IA_p
 
 | Decisión | Justificación, alcance y estado |
 | --- | --- |
-| Carpeta independiente | La consigna habla del repositorio del proyecto. El usuario exige carpeta separada y prohíbe Git ahora; se implementa aquí sin alterar el original. |
+| Carpeta independiente | La consigna habla del repositorio del proyecto. La etapa inicial se realizó en una carpeta separada sin Git, por instrucción del usuario. Posteriormente se publicó el repositorio independiente emacruz-wiki-bi, actualmente público, sin alterar el proyecto original. [Estado de publicación](publicacion_github.md). |
 | Informe aplazado | El HTML pide informe breve. Se preparan evidencias y respuestas en Markdown; el usuario reserva elaboración/entrega para otra tarea. No hay Word/PDF. |
 | Revisión IA y humana separadas | El HTML solicita revisar modificaciones y conclusiones. Codex revisa automáticamente y documenta propuestas locales. La aceptación humana sigue pendiente; no se equipara a validación automática. |
 | Dos versiones de repositorio | Copia local antigua 29a44d8 y referencia remota fijada 5fba63e. Se conservan ambas, sin actualizar ni hacer fetch en el repositorio original. Excel local coincide con blob remoto. |
@@ -13,7 +13,7 @@ Versión 1.0. Base normativa: [HTML docente](../fuentes/consigna/Tarea_wiki_IA_p
 | Días, medianoche y duplicados | [KPI v1.0](../wiki/indicadores.md): concordancia semanal, cruce solo documentado, duplicados retenidos y excluidos del numerador. Feriados y distritos se diagnostican aparte. |
 | Sin vinculación territorial inventada | Mismo sector no demuestra que todo distrito comparta todas las frecuencias. Solapamientos requieren mapas y persona responsable. |
 | Ingestas auténticas | Congelar primera versión antes de consulta/auditoría y antes de leer JSON. Después recuperar exportador y JSON, comparar y conservar otra versión. |
-| Privacidad y publicación | Uso local solicitado. Permiso EMACRUZ/docente y licencia de redistribución no acreditados. Se preservan bytes pero se excluyen copias sensibles del futuro Git hasta revisar permisos. |
+| Privacidad y publicación | El repositorio ya está publicado y es público. Se conservan las fuentes y evidencias históricas sin cambiar sus bytes. El permiso EMACRUZ/docente y la licencia de redistribución continúan no acreditados; la disponibilidad en GitHub no sustituye su revisión. [Revisión humana](revision_humana.md). |
 
 No se ejecutan tareas de la historia SCRUM-22, no se fabrican avisos ni observaciones. Los objetivos predictivos del proyecto se documentan como no respondibles con programación sola.
 

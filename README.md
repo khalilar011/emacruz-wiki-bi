@@ -2,7 +2,7 @@
 
 Implementación académica independiente de Alerta Ruta, Business Intelligence II, Unidad 3, consigna 03/11/2026. Navegación: [wiki/index.md](wiki/index.md). La programación publicada permite diagnosticar calidad documental; no acredita servicio ejecutado, vigencia institucional ni predicción de acumulación.
 
-Se ejecutaron dos ingestas reales: primero Excel y objetivos/documentación; después, JSON y exportador de Alerta Ruta. Los estados se preservaron antes de consultar/auditar e incorporar la segunda evidencia. Las conclusiones propuestas requieren [revisión humana](docs/revision_humana.md). La etapa actual prepara un repositorio Git independiente para una entrega **privada** autorizada por el usuario. La publicación remota permanece pendiente por restricciones de acceso; ver [estado y comprobaciones](docs/publicacion_github.md). El informe académico final se elaborará por separado. El repositorio original no se modifica.
+Se ejecutaron dos ingestas reales: primero Excel y objetivos/documentación; después, JSON y exportador de Alerta Ruta. Los estados se preservaron antes de consultar/auditar e incorporar la segunda evidencia. Las conclusiones propuestas requieren [revisión humana](docs/revision_humana.md). La publicación fue completada en el repositorio **público** [khalilar011/emacruz-wiki-bi](https://github.com/khalilar011/emacruz-wiki-bi), con rama principal `main`; ver [estado y comprobaciones](docs/publicacion_github.md). El informe académico final se elaborará por separado. El repositorio original no se modifica.
 
 ## Estructura
 
@@ -70,11 +70,11 @@ La [validación ejecutada de cierre](evidencias/revision/validacion_final_correg
 
 Se corrigió un paréntesis antes de ejecutar la preparación, el perfil que confundía 0 con ausencia (sin cambiar KPI), una errata del prompt sobre duplicados y cuatro enlaces relativos en la evidencia de verificaciones. Se conservan [análisis inicial con fallo](evidencias/primera_ingesta/calculo/analisis.json), [corrección](evidencias/primera_ingesta/calculo_v1/analisis.json), [auditoría fallida](evidencias/revision/enlaces_antes.json) y [repetición sin enlaces rotos](evidencias/revision/enlaces_corregidos.json). El [primer cierre](evidencias/revision/validacion_final/proyecto.json) obtuvo 19/20 porque el propio informe enlazado todavía no se había guardado durante la comprobación. Se corrigió el orden de escritura del reporte y se repitió toda la reproducción en carpeta nueva, sin borrar el fallo.
 
-Pendientes humanos: aceptar cambios IA, aprobar reglas y conclusiones, confirmar vigencia/transcripción/territorio y permisos de redistribución pública. Roles propuestos sin asignación ficticia en [revisión humana](docs/revision_humana.md) y [tres próximos pasos](wiki/respuestas_paso_6.md). El informe separado no se incluye. La nueva preparación Git conserva la historia analítica y no cambia el KPI.
+Pendientes humanos: aceptar cambios IA, aprobar reglas y conclusiones, confirmar vigencia/transcripción/territorio y permisos de redistribución pública. Roles propuestos sin asignación ficticia en [revisión humana](docs/revision_humana.md) y [tres próximos pasos](wiki/respuestas_paso_6.md). El informe separado no se incluye. La publicación en GitHub conserva la historia analítica y no cambia el KPI.
 
-Las fuentes y ZIP de estados contienen copias originales y metadatos heredados. La instrucción del 05/11/2026 autoriza conservarlos en la entrega privada; `.gitignore` incluye esas evidencias y excluye secretos, cachés y temporales. `.gitattributes` conserva los bytes exactos al clonar. La autorización del usuario no acredita permiso de EMACRUZ, licencia pública ni vigencia. No cambiar a público sin revisión. Ver [preparación GitHub](docs/publicacion_github.md), [método](docs/decisiones_metodologicas.md) y [AGENTS](AGENTS.md).
+Las fuentes y ZIP de estados contienen copias originales y metadatos heredados; `.gitignore` incluye esas evidencias y excluye secretos, cachés y temporales. `.gitattributes` conserva los bytes exactos al clonar. La visibilidad pública fue confirmada por el usuario y comprobada en GitHub. Esa disponibilidad no acredita permiso institucional de EMACRUZ, autorización docente de redistribución, licencia pública ni vigencia: esas revisiones siguen pendientes. Ver [publicación GitHub](docs/publicacion_github.md), [método](docs/decisiones_metodologicas.md) y [AGENTS](AGENTS.md).
 
-Para repetir el control previo a publicación, usando una salida nueva:
+Para repetir el control de archivos y publicación, usando una salida nueva:
 
 ```powershell
 python -X utf8 scripts/auditar_publicacion.py --salida salidas/publicacion_nueva.json

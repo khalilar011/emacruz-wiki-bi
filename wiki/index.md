@@ -29,6 +29,6 @@ Estado: dos ingestas ejecutadas. KPI documental v1.0, 6/21 = 28,57 %. La segunda
 - [Consulta y verificaciones](../evidencias/consulta_y_verificaciones/resumen.md)
 - [Segunda ingesta](../evidencias/segunda_ingesta/resumen.md)
 - [Revisión y cierre técnico](../evidencias/revision/resumen.md)
-- [Preparación de la entrega privada en GitHub](../docs/publicacion_github.md)
+- [Publicación completada en GitHub](../docs/publicacion_github.md)
 
-El informe académico separado sigue pendiente. La preparación Git está autorizada y en curso; no se acredita publicación remota. Los archivos de conocimiento actuales son material de trabajo verificable, sin aprobación operativa atribuida a EMACRUZ.
+La wiki está publicada en el repositorio **público** [khalilar011/emacruz-wiki-bi](https://github.com/khalilar011/emacruz-wiki-bi), rama principal `main`. El informe académico separado sigue pendiente. Las revisiones humanas y los permisos institucionales continúan pendientes; la publicación no acredita aprobación operativa de EMACRUZ.

@@ -8,11 +8,11 @@ Estado actual: **pendiente**. No se ha recibido aprobación de una persona sobre
 | Conclusión de priorizar F01–F06 y F13–F21 | Responsable del mantenimiento de datos | [Hallazgos](../wiki/hallazgos.md), filas originales y CSV | Pendiente |
 | Vigencia y transcripción de avisos, zonas, feriados y solapamientos | Interlocutor autorizado de EMACRUZ, por identificar | Excel e imágenes originales aún ausentes | Pendiente |
 | Relación distrito → frecuencia y alcance geográfico | Responsable temático/cartográfico, por asignar | Mapas/polígonos y catálogo autorizado | Pendiente |
-| Uso y futura publicación de copias, metadatos personales y consigna | Titular de datos/documento y responsable académico | [Procedencia](../fuentes/procedencia.md), originales y .gitignore | Pendiente |
+| Permisos de uso y redistribución pública de copias, metadatos personales y consigna | Titular de datos/documento y responsable académico | [Procedencia](../fuentes/procedencia.md), originales y .gitignore | Pendiente |
 | Aceptación de páginas modificadas por IA | Integrante del equipo o docente, por asignar | Estados y diferencias conservados | Pendiente |
 
 Para registrar una aprobación real se añadirá fecha obtenida al recibirla, persona/rol identificado con autorización, alcance exacto, versión/huellas revisadas, decisión y referencia de la evidencia. No marcar la tabla como completa por ejecutar scripts. Las propuestas pueden conservarse en la wiki para revisión, pero no se aplican a decisiones operativas.
 
-La instrucción del usuario del 05/11/2026 autoriza preparar y depositar la entrega en un repositorio privado de su cuenta. No aprueba las reglas o conclusiones ni acredita permiso institucional o de redistribución pública. [Estado de publicación](publicacion_github.md). El informe académico separado sigue pendiente. Las carencias de fuentes son resultados del diagnóstico, no datos que deban inventarse para cerrar la implementación.
+La solicitud inicial del 05/11/2026 contemplaba un repositorio privado. El repositorio ya está publicado con visibilidad pública, confirmada por el usuario y comprobada en GitHub. Ese hecho no aprueba las reglas o conclusiones ni acredita permiso institucional, autorización docente o licencia de redistribución pública. Todos los estados de revisión de esta tabla siguen pendientes. [Estado de publicación](publicacion_github.md). El informe académico separado sigue pendiente. Las carencias de fuentes son resultados del diagnóstico, no datos que deban inventarse para cerrar la implementación.
 
 [Reglas](../AGENTS.md) · [Índice](../wiki/index.md)

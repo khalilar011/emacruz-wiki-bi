@@ -36,5 +36,5 @@ secrets.json
 .DS_Store
 Thumbs.db
 Desktop.ini
-# Fuentes y evidencias se conservan para la entrega PRIVADA autorizada.
-# No cambiar a público sin revisar permisos y metadatos heredados.
+# Fuentes y evidencias se conservan como parte de la entrega publicada.
+# Permisos institucionales y metadatos heredados siguen sujetos a revisión.
